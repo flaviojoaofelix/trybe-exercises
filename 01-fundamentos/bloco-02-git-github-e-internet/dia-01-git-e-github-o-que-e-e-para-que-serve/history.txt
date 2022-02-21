@@ -1,0 +1,99 @@
+  292  cd Trybe
+  293  ls
+  294  cd trybe-exercises
+  295  ls
+  296  cd 01-fundamentos
+  297  ls
+  298  cd bloco-02
+  299  cd bloco-02-git-github-e-internet
+  300  ls
+  301  cd dia-01-git-e-github-o-que-e-e-para-que-serve
+  302  ls
+  303  cp 5-motivos-para-voce-aprender-javascript.txt flavio-alteracao-01.txt
+  304  cp Primeira\ alteração\ -\ Junção.txt flavio-alteracao-02.txt
+  305  touch alteracao-02.txt
+  306  pwd
+  307  clear
+  308  history -p
+  309  cd..
+  310  cd ~
+  311  ls
+  312  cd Trybe
+  313  ls
+  314  cd trybe-exercises
+  315  git init
+  316  git branch -m main
+  317  git status
+  318  ls
+  319  git add .
+  320  git commit -m "Primeiro Commit"
+  321  git add
+  322  git add .
+  323  git commit -m "Primeiro Commit"
+  324  git add .
+  325  ls -l
+  326  ls -la
+  327  git push
+  328  ls
+  329  history
+  330  history -p
+  331  pwd
+  332  git pull
+  333  git checkout main
+  334  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  335  ls
+  336  ls -la
+  337  ls
+  338  cd trybe-exercises
+  339  ls
+  340  cd trybe-exercises
+  341  ls
+  342  ls -la
+  343  rm -rf .git
+  344  ls
+  345  ls -la
+  346  cd ..
+  347  ls
+  348  ls -la
+  349  git commit -m "Iniciando Repositório - Primeiro Commit"
+  350  git add .
+  351  git remote add origin git@github.com:flaviojoaofelix/trybe-exercises.git
+  352  git remote -v
+  353  git push origin main
+  354  git push origin master
+  355  git push -u origin main
+  356  git add --all
+  357  git commit -m "Iniciando Repositório - Primeiro Commit"
+  358  git push origin main
+  359* sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  360* ls
+  361* ls -la
+  362* ls
+  363* cd trybe-exercises
+  364* ls
+  365* cd trybe-exercises
+  366* ls
+  367* ls -la
+  368* rm -rf .git
+  369* ls
+  370* ls -la
+  371* cd ..
+  372* ls
+  373* ls -la
+  374* git commit -m "Iniciando Repositório - Primeiro Commit"
+  375* git add .
+  376* git remote add origin git@github.com:flaviojoaofelix/trybe-exercises.git
+  377* git remote -v
+  378* git push origin main
+  379* git push origin master
+  380* git push -u origin main
+  381* git add --all
+  382* git commit -m "Iniciando Repositório - Primeiro Commit"
+  383* git push origin main
+  384  ls
+  385  cd 01-fundamentos
+  386  ls
+  387  cd bloco-02-git-github-e-internet
+  388  ls
+  389  cd dia-01-git-e-github-o-que-e-e-para-que-serve
+  390  ls
