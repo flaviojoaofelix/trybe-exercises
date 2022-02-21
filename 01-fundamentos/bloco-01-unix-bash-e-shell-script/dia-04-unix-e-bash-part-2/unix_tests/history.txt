@@ -1,0 +1,286 @@
+    3  node
+    4  nvm list
+    5  npm list
+    6  cd /
+    7  ls
+    8  ls -a
+    9  ls
+   10  cd Users
+   11  ls
+   12  cd fon
+   13  clear
+   14  ls
+   15  cd Music
+   16  ls
+   17  mkdir Trybe
+   18  ls
+   19  cd Trybe
+   20  ls
+   21  cd ..
+   22  cd Trybe
+   23  cd .
+   24  clear
+   25  cd ..
+   26  ls -a
+   27  pwd
+   28  ls
+   29  cd Trybe
+   30  ls
+   31  touch arquivo1.txt
+   32  ls
+   33  cp arquivo1.txt arquivo2.txt
+   34  ls
+   35  cat arquivo1.txt
+   36  cat arquivo1.txt
+   37  cp arquivo1.txt arquivo2.txt
+   38  cat arquivo2.txt
+   39  cleart
+   40  clear
+   41  mv arquivo2.txt /Users/fon/Music
+   42  ls
+   43  cd ..
+   44  ls
+   45  rm arquivo2.txt
+   46  ls
+   47  clear
+   48  mkdir apagar
+   49  ls
+   50  rmdir apagar
+   51  ls
+   52  ls
+   53  cd Music
+   54  ls
+   55  cd ..
+   56  ls
+   57  cd ~
+   58  ls
+   59  pwd
+   60  ls
+   61  ls -l
+   62  ls -a
+   63  clear
+   64  ls -a
+   65  cd Google\ Drive
+   66  ls
+   67  cd Meu\ Drive
+   68  ls
+   69  cd ..
+   70  ls
+   71  cd ..
+   72  ls
+   73  cd Do
+   74  cd Documents
+   75  ls
+   76  cd Drive
+   77  ls
+   78  cd ..
+   79  cd ..
+   80  ls
+   81  cd Google\ Drive
+   82  ls
+   83  cd Meu Drive
+   84  cd Meu\ Drive
+   85  ls
+   86  mkdir Trybe
+   87  ls
+   88  cd Trybe
+   89  mkdir Aulas
+   90  ls
+   91  cd Aulas
+   92  mkdir B1.3
+   93  ls
+   94  cd B1.3
+   95  ls
+   96  mkdir unix_tests
+   97  ls
+   98  ls
+   99  cd unix_tests
+  100  ls
+  101  clear
+  102  touch trybe.txt
+  103  ls
+  104  cp trybe.txt trybe_backup.txt
+  105  mv trybe.txt trybe1.txt
+  106  ls
+  107  mkdir backup
+  108  ls
+  109  mkdir backup2
+  110  ls
+  111  mv trybe_backup.txt ./backup/trybe_backup.txt
+  112  ls
+  113  cd backup
+  114  ls
+  115  cd ..
+  116  mv ./backup/trybe_backup.txt ./backup2/trybe_backup.txt
+  117  ls
+  118  ls *
+  119  rmdir backup
+  120  mv backup2 backup
+  121  ls
+  122  pwd
+  123  ls
+  124  rmdir backup
+  125  rm -r backup
+  126  ls
+  127  clear
+  128  cat > skills.txt
+  129  head -n 5 skills.txt
+  130  tail -4 skills.txt
+  131  ls
+  132  rm *.txt
+  133  ls
+  134  head --help
+  135  head helpo
+  136  head -help
+  137  man head
+  138  ls
+  139  man tail
+  140  cat > skills.txt
+  141  head -3 skills.txt
+  142  ls
+  143  rm *.txt
+  144  ls
+  145  curl -o countries.txt "https://gist.githubusercontent.com/kalinchernev/486393efcca01623b18d/raw/daa24c9fea66afb7d68f8d69f0c4b8eeb9406e83/countries"
+  146  less countries.txt
+  147  cat countries.txt
+  148  grep countries.txt
+  149  grep 'Zambia' countries.txt
+  150  grep -i brasil countries.txt
+  151  grep -i brazil countries.txt
+  152  grep -in brazil countries.txt
+  153  grep -iv brazil countries.txt
+  154  whatis grep
+  155  chsh -s $(which zsh)
+  156  brew install zsh
+  157  zsh --version
+  158  sudo powermetrics --samplers smc |grep -i "CPU die temperature"
+  159  sudo powermetrics --samplers smc |grep -i "CPU die temperature"
+  160  ps
+  161  ls
+  162  cd Google\ Drive
+  163  ls
+  164  cd Meu\ Drive
+  165  ls\\nls
+  166  ls
+  167  cd Trybe
+  168  ls
+  169  cd Aulas
+  170  ls
+  171  cd B1.3
+  172  ls
+  173  cd unix_tests
+  174  ls
+  175  who countries.txt
+  176  ls -la
+  177  ls -l
+  178  find -name "*.txt"
+  179  find . -name "*.txt"
+  180  cd..
+  181  cd ..
+  182  cd ..
+  183  ls
+  184  mkdir unix_tests
+  185  ls
+  186  rm -r B1.3
+  187  ls
+  188  cd unix_tests
+  189  ls
+  190  history -c
+  191  history
+  192  man history
+  193  history -p
+  194  ls
+  195  cd Google\ Drive
+  196  ls
+  197  cd Meu\ Drive
+  198  ls
+  199  cd Trybe
+  200  ls
+  201  cd Exercicios
+  202  ls
+  203  cd fundamentos
+  204  ls
+  205  cd 1.4
+  206  ls
+  207  cd unix_tests
+  208  ls
+  209  clear
+  210  ls -l
+  211  chmod a+rw bunch_of_things.txt
+  212  ls -l
+  213  ps
+  214  sleep 30 &
+  215  jobs
+  216  kill %1
+  217  sleep 30
+  218  jobs
+  219  bg %1
+  220  jobs
+  221  sleep 300 &
+  222  sleep 200
+  223  sleep 100
+  224  jobs
+  225  fg %1
+  226  jobs
+  227  ps
+  228  bg 2588
+  229  bg %2588
+  230  jobs
+  231  bg %3
+  232  kill *
+  233  kill %1 %2 %3
+  234  jobs
+  235  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  236  brew install coreutils
+  237  sudo chmod a+rw bunch_of_things.txt
+  238  ls -l
+  239  sudo chmod 666 bunch_of_things.txt
+  240  ls -l
+  241  brew install telnet
+  242  brew install cmatrix
+  243  cmatrix
+  244  brew install fortune
+  245  ls
+  246  cat > fortune.txt
+  247  cat fortune.txt
+  248  fortune > fortune.txt
+  249  fortune
+  250  cat > fortune.txt | fortune
+  251  cat fortune.txt
+  252  fortune | cat > fortune.txt
+  253  cat fortune.txt
+  254  fortune > fortune2.txt
+  255  cat fortune2.txt
+  256  wc -w fortune.txt
+  257  wc -w fortune2.txt
+  258  brew install sl
+  259  sl
+  260  sl -F
+  261  brew install cowsay
+  262  cowsay
+  263  cowsay
+  264  man cowsay
+  265  cowsay -f fortune2.txt
+  266  cat fortune2.txt| cowsay
+  267  echo 'Tão Então' | cowsay
+  268  factor 42
+  269  man rev
+  270  rev fortune2.txt
+  271  telnet towel.blinkenlights.nl
+  272  ls
+  273  cd Google\ Drive
+  274  cd Meu\ Drive
+  275  cd Trybe
+  276  cd Exercicios
+  277  ls
+  278  cd fundamentos
+  279  cd 1.4
+  280  ls
+  281  cd unix_tests
+  282  ls
+  283  echo oi
+  284  cat > history.txt | history
+  285  ls
+  286  cat history.txt
+  287  history | cat > history.txt
+  288  cat history.txt
