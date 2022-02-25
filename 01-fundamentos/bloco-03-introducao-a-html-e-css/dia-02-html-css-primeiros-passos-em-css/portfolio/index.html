@@ -1,25 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Flávio João Félix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ECF39E;
+            font-family: 'Rubik', sans-serif;
+            font-size: 12px;
+        }
+        h1 {
+            color: #132A13;
+            font-size: 44px;
+        }
+        h2 {
+            color: #31572C;
+            font-size: 22px;
+        }
+        h3 {
+            color: #4F772D;
+            font-size: 18px;
+        }
+        h4 {
+            font-size: 16px;
+        }
+        p {
+            text-align: justify;
+            font-size: 16px;
+        }
+        .destaque {
+            color: #90A955;
+        }
+        .lista-t1 {
+            font-size: 18px;
+        }
+        .lista-t2 {
+            font-size: 16px;
+        }
+        .lista-t3 {
+            font-size: 14px;
+        }
+        .botao1 {
+            background-color: #132A13;
+            border-radius: 8px;
+            border: 2px solid white;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #90A955;
+        }
+        .botao2 {
+            background-color: #132A13;
+            border-radius: 4px;
+            padding: 5px;
+            margin: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 10px;
+            color: #90A955;
+        }
+    </style>
 </head>
+
 <body>
     <h1 id="titulo">Portfolio</h1>
     <h2 id="nome">Flávio João Félix</h2>
     <img src="img/me.jpg" alt="Foto de Flávio João Félix com um belo sorriso!" id="foto">
-    <p id="decricao"><i>Um futuro Desenvolvedor Web Full Stack</i>, apaixonado por <b>computadores</b> e <b>tecnologia</b> desde a adolescência. Sou brasileiro e moro em Florianópolis/SC.</p>
+    <p id="descricao">Um futuro <em>Desenvolvedor Web Full Stack</em>, apaixonado por <strong class="destaque">computadores</strong> e
+        <strong class="destaque">tecnologia</strong> desde a adolescência.</p>
+    <p id="meulocal">Sou brasileiro e moro em Florianópolis/SC.</p>
     <h3 id="habilidades">Algumas Habilidades</h3>
     <ul>
-        <li><strong>Certificado em Desenvolvimento Web com PHP</strong></li>
-        <li><strong>Conhecimentos diversos em TI</strong></li>
-        <li>Facilidade de comunicação</li>
+        <li class="lista-t1"><strong class="destaque">Certificado em Desenvolvimento Web com PHP</strong></li>
+        <li class="lista-t2"><strong>Conhecimentos diversos em TI</strong></li>
+        <li class="lista-t3">Facilidade de comunicação</li>
     </ul>
-    <a href="img/me.jpg" id="fotolink">Minha Foto</a><br />
-    <a href="" target="_blank" id="bloglink">Blog da Trybe</a><br />
     <br />
-    <h4>Indice:</h4> <a href="#titulo">Título</a> - <a href="#nome">Nome</a> - <a href="#foto">Foto</a> - <a href="#descricao">Descrição</a> - <a href="#habilidades">Habilidades</a> - <a href="#fotolink">Link da Foto</a> - <a href="#bloglink">Link do Blog</a>
+    <a href="img/me.jpg" id="fotolink" class="botao1">Minha Foto</a>
+    <a href="" target="_blank" id="bloglink" class="botao1">Blog da Trybe</a><br />
+    <br />
+    <h4>Indice:</h4><a href="#titulo" class="botao2">Título</a><a href="#nome" class="botao2">Nome</a><a href="#foto" class="botao2">Foto</a><a
+        href="#descricao" class="botao2">Descrição</a><a href="#habilidades" class="botao2">Habilidades</a><a href="#fotolink" class="botao2">Link da Foto</a><a href="#bloglink" class="botao2">Link do Blog</a>
 </body>
+
 </html>
