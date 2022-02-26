@@ -10,7 +10,7 @@
 #### Exemplos
 
 1. Box Model - Modelo de Caixas no CSS
-! [Exemplo] (https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/fundamentals/html-css/images/css-box-model-example-a9ff30a667b5b5ac7e412931ed9b2afc.png)
+![Exemplo](https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/fundamentals/html-css/images/css-box-model-example-a9ff30a667b5b5ac7e412931ed9b2afc.png)
 
 2. Posicionamento de Elementos
     - Posicione o Mário acima do Goomba.
