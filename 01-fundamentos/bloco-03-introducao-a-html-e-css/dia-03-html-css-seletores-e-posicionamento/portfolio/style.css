@@ -2,6 +2,7 @@ body {
     background-color: #ECF39E;
     font-family: 'Rubik', sans-serif;
     font-size: 12px;
+    padding: 3%;
 }
 h1 {
     color: #132A13;
@@ -55,4 +56,26 @@ p {
     text-decoration: none;
     font-size: 10px;
     color: #90A955;
+}
+#nome {
+    text-align: center;
+}
+.img-container {
+    height: 200px;
+    position: relative;
+}
+#foto {
+    float: left;
+    height: 180px;
+    padding: 10px;
+    background-color: #132A13;
+}
+#descricao {
+    font-family: monospace;
+    position: absolute;
+    top: 36%;
+    right: 8%;
+}
+ul li:nth-child(odd) {
+    font-style: italic;
 }
