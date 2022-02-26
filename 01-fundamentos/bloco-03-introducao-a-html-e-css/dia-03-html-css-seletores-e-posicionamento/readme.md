@@ -43,3 +43,15 @@
     - (Bônus) Para cada link na lista de aliados da pessoa desenvolvedora, faça com que ao passar o mouse sobre cada um, o texto fique em negrito e assuma a cor de fonte "temática do site"
     - Dica 1: Utilize o seletor :hover para controlar o passar do mouse.
     - Dica 2: Sugestão de cores padrão. StackOverflow (laranja), W3Schools (verde), MDN (preta), DevDocs (amarela), Trybe (verde).
+
+#### Exercícios
+
+**Introdução**
+
+> Antes de começar, você deve seguir estas instruções e fazer o setup para o exercício de hoje:
+> Entre no diretório que você criou no dia anterior;
+> Procure a tag <style></style> , onde você fez as alterações ontem. Mova todo o conteúdo da tag style e coloque em um arquivo style.css ;
+> Adicione as novas alterações dentro do arquivo style.css ;
+> Não se esqueça de importar esse arquivo na sua página;
+> Depois de importar o arquivo style.css , você já pode remover a tag style do seu documento.
+> Lembre-se que para executar o seu código enquanto o desenvolve você deve utilizar a extensão Live Server , para saber mais sobre ela acesse nosso conteúdo sobre isso.
