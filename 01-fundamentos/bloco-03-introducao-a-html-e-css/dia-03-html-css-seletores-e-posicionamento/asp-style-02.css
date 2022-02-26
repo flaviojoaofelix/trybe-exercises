@@ -1,0 +1,44 @@
+div:hover {
+    border: 2px solid black;
+}
+
+h3 {
+    margin: 0;
+    padding: 4px;
+}
+
+.um {
+    background-color: #184E77;
+}
+.um h3 {
+    font-size: 32px;
+    font-style: italic;
+}
+.dois {
+    background-color: #1E6091;
+}
+.dois h3 {
+    font-size: 28px;
+}
+.tres {
+    background-color: #1A759F;
+    height: 100px;
+}
+.tres h3 {
+    font-size: 24px;
+    font-style: italic;
+    padding: 36px 0 0 4px;
+}
+.quatro {
+    background-color: #168AAD;
+}
+.quatro h3 {
+    font-size: 20px;
+}
+.cinco {
+    background-color: #34A0A4;
+}
+.cinco h3 {
+    font-size: 16px;
+    font-style: italic;
+}
