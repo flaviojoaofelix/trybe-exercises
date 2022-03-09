@@ -61,16 +61,12 @@ if (idadePessoa < 18) {
 // “Pessoa” é a mais nova.
 
 let nomes = ['Marcella', 'Carlos', 'Camila'];
-let idades = [32, 5, 28];
-let maisVelho = 0;
+let idades = [32, 45, 33];
 let maisNovo = 200;
 let index = 0;
 
 for (let i = 0; i < idades.length; i += 1) {
-    if (idades[i] > maisVelho) {
-        maisVelho = idades[i];
-    }
-    if (idades[i] <= maisVelho && idades[i] < maisNovo) {
+    if (idades[i] < maisNovo) {
       maisNovo = idades[i];
       index = i;
     }
