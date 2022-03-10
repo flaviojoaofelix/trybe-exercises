@@ -18,3 +18,7 @@ for(let i = primeiro; i <= ultimo; i += 1) {
 }
 
 console.log('O maior número primo entre ' + primeiro + ' e ' + ultimo + ' é: ' + maiorPrimo);
+
+// Após muitas tentativas decidi pesquisar por soluções que se encaixassem dentro das limitações dos conteúdos que havíamos estudado até então
+// Acabei encontrando a melhor solução no seguinte link:
+// https://www.javascriptprogressivo.net/2018/12/Verificar-Numero-Primo-Testar-Descobrir.html
