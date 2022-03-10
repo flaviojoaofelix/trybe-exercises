@@ -6,13 +6,16 @@
 // Exemplo: bishop (bispo) -> diagonals (diagonais)
 
 let peca = 'Torre';
+let movimento;
 
 if (peca.toLowerCase() === 'bispo' || peca.toLowerCase() === 'bishop') {
-    console.log('A peça ' + peca.toUpperCase() + ' se movimenta em DIAGONAIS.');
+    movimento = 'diagonais';
 } else if (peca.toLowerCase() === 'cavalo' || peca.toLowerCase() === 'horse') {
-    console.log('A peça ' + peca.toUpperCase() + ' se movimenta em L.');
+    movimento = 'l';
 } else if (peca.toLowerCase() === 'torre' || peca.toLowerCase() === 'tower') {
-    console.log('A peça ' + peca.toUpperCase() + ' se movimenta em LINHA.');
+    movimento = 'linha';
 } else {
     console.log('Insira um nome válido de peça para determinar seu movimento.');
 }
+
+console.log('A peça ' + peca.toUpperCase() + ' se movimenta em ' + movimento.toUpperCase());
