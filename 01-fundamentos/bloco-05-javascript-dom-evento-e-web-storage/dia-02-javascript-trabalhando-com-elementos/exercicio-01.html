@@ -78,12 +78,17 @@
       let rightContent = document.createElement('section');
       rightContent.classList.add('right-content');
 
+      let picSum = document.createElement('img');
+      picSum.setAttribute('src', 'https://picsum.photos/200');
+      picSum.classList.add('small-image');
+
       body[0].appendChild(h1);
       body[0].appendChild(mainContent);
       mainContent.appendChild(centerContent);
       document.getElementsByClassName('center-content')[0].appendChild(pCenterContent);
       mainContent.appendChild(leftContent);
       mainContent.appendChild(rightContent);
+      document.getElementsByClassName('left-content')[0].appendChild(picSum);
     </script>
   </body>
 </html>
