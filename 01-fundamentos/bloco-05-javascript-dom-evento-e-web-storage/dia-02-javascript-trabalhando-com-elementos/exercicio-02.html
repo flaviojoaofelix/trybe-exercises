@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+      let body = document.getElementsByTagName('body');
+
+      // Questão 01 - Exercício 01
+      let h1 = document.createElement('h1');
+      h1.innerText = 'Exercício 5.2 - JavaScript DOM';
+      body[0].appendChild(h1);
+
+      // Questão 02 - Exercício 01
+      let mainContent = document.createElement('main');
+      mainContent.classList.add('main-content');
+      body[0].appendChild(mainContent);
+
+      // Questão 03 - Exercício 01
+      let centerContent = document.createElement('section');
+      centerContent.classList.add('center-content');
+      mainContent.appendChild(centerContent);
+
+      // Questão 04 - Exercício 01
+      let pCenterContent = document.createElement('p');
+      pCenterContent.innerText = 'Não é fácil, não é difícil, mas um pouco confuso!';
+      document.getElementsByClassName('center-content')[0].appendChild(pCenterContent);
+
+      // Questão 05 - Exercício 01
+      let leftContent = document.createElement('section');
+      leftContent.classList.add('left-content');
+      mainContent.appendChild(leftContent);
+
+      // Questão 06 - Exercício 01
+      let rightContent = document.createElement('section');
+      rightContent.classList.add('right-content');
+      mainContent.appendChild(rightContent);
+
+      // Questão 07 - Exercício 01
+      let picSum = document.createElement('img');
+      picSum.setAttribute('src', 'https://picsum.photos/200');
+      picSum.classList.add('small-image');
+      document.getElementsByClassName('left-content')[0].appendChild(picSum);
+      
+      // Questão 08 - Exercício 01
+      let ul = document.createElement('ul');
+      ul.classList.add('lista');
+      rightContent.appendChild(ul);
+      let listaUL = rightContent.querySelector('.lista');
+      let numeros = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+      for (let index = 0; index < numeros.length; index += 1) {
+          let li = document.createElement('li');
+          li.innerText = numeros[index];
+          listaUL.appendChild(li);
+      }
+
+      // Questão 09 - Exercício 01
+      for (let i = 0; i < 3; i += 1) {
+        let h3 = document.createElement('h3');
+        mainContent.appendChild(h3);
+      }
+
+      // Questão 01 - Exercício 02
+      h1.classList.add('title');
+
+      // Questão 02 - Exercício 02
+      h3 = mainContent.getElementsByTagName('h3');
+      for (let i = 0; i < h3.length; i += 1) {
+        h3[i].classList.add('description');
+      }
+
+      // Questão 03 - Exercício 02
+      mainContent.removeChild(leftContent);
+
+      // Questão 04 - Exercício 02
+      rightContent.style.marginRight = 'auto';
+
+      // Questão 05 - Exercício 02
+      centerContent.parentElement.style.backgroundColor = 'green';
+
+      // Questão 05 - Exercício 02
+      listaUL.removeChild(listaUL.lastElementChild);
+      listaUL.removeChild(listaUL.lastElementChild);
+    </script>
+  </body>
+</html>
+
+<!-- 
+Agora que você criou muita coisa, vamos fazer algumas alterações e remoções:
+1. Adicione a classe title na tag h1 criada;
+2. Adicione a classe description nas 3 tags h3 criadas;
+3. Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+4. Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section ;
+5. Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+6. Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+-->
