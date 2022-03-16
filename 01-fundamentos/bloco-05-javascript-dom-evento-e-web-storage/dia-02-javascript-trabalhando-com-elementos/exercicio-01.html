@@ -69,9 +69,13 @@
       let centerContent = document.createElement('section');
       centerContent.classList.add('center-content');
 
+      let pCenterContent = document.createElement('p');
+      pCenterContent.innerText = 'Não é fácil, não é difícil, mas um pouco confuso!';
+
       body[0].appendChild(h1);
       body[0].appendChild(mainContent);
       mainContent.appendChild(centerContent);
+      document.getElementsByClassName('center-content')[0].appendChild(pCenterContent);
     </script>
   </body>
 </html>
