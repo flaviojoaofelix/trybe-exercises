@@ -75,11 +75,15 @@
       let leftContent = document.createElement('section');
       leftContent.classList.add('left-content');
 
+      let rightContent = document.createElement('section');
+      rightContent.classList.add('right-content');
+
       body[0].appendChild(h1);
       body[0].appendChild(mainContent);
       mainContent.appendChild(centerContent);
       document.getElementsByClassName('center-content')[0].appendChild(pCenterContent);
       mainContent.appendChild(leftContent);
+      mainContent.appendChild(rightContent);
     </script>
   </body>
 </html>
