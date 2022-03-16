@@ -60,43 +60,43 @@
       // COLOQUE SEU CÓDIGO AQUI
       let body = document.getElementsByTagName('body');
 
-      // Questão 1 - Exercício 01
+      // Questão 01 - Exercício 01
       let h1 = document.createElement('h1');
       h1.innerText = 'Exercício 5.2 - JavaScript DOM';
       body[0].appendChild(h1);
 
-      // Questão 2 - Exercício 01
+      // Questão 02 - Exercício 01
       let mainContent = document.createElement('main');
       mainContent.classList.add('main-content');
       body[0].appendChild(mainContent);
 
-      // Questão 3 - Exercício 01
+      // Questão 03 - Exercício 01
       let centerContent = document.createElement('section');
       centerContent.classList.add('center-content');
       mainContent.appendChild(centerContent);
 
-      // Questão 4 - Exercício 01
+      // Questão 04 - Exercício 01
       let pCenterContent = document.createElement('p');
       pCenterContent.innerText = 'Não é fácil, não é difícil, mas um pouco confuso!';
       document.getElementsByClassName('center-content')[0].appendChild(pCenterContent);
 
-      // Questão 5 - Exercício 01
+      // Questão 05 - Exercício 01
       let leftContent = document.createElement('section');
       leftContent.classList.add('left-content');
       mainContent.appendChild(leftContent);
 
-      // Questão 6 - Exercício 01
+      // Questão 06 - Exercício 01
       let rightContent = document.createElement('section');
       rightContent.classList.add('right-content');
       mainContent.appendChild(rightContent);
 
-      // Questão 7 - Exercício 01
+      // Questão 07 - Exercício 01
       let picSum = document.createElement('img');
       picSum.setAttribute('src', 'https://picsum.photos/200');
       picSum.classList.add('small-image');
       document.getElementsByClassName('left-content')[0].appendChild(picSum);
       
-      // Questão 8 - Exercício 01
+      // Questão 08 - Exercício 01
       let ul = document.createElement('ul');
       ul.classList.add('lista');
       rightContent.appendChild(ul);
@@ -109,7 +109,7 @@
           listaUL.appendChild(li);
       }
 
-      // Questão 9 - Exercício 01
+      // Questão 09 - Exercício 01
       for (let i = 0; i < 3; i += 1) {
         let h3 = document.createElement('h3');
         mainContent.appendChild(h3);
@@ -126,6 +126,9 @@
 
       // Questão 03 - Exercício 02
       mainContent.removeChild(leftContent);
+
+      // Questão 04 - Exercício 02
+      rightContent.style.marginRight = 'auto';
     </script>
   </body>
 </html>
