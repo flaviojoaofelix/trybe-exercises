@@ -36,6 +36,7 @@ function createDays(days, fridays, holidays) {
         let day = document.createElement('li');
         day.innerText = days[i];
         day.className = 'day';
+        day.addEventListener('click', setTaskColorToDay); // Questão 10
 
         if(verifyFridays(days[i], fridays)) day.classList.add('friday');
         if(verifyHolidays(days[i], holidays)) day.classList.add('holiday');
@@ -186,7 +187,7 @@ function createTaskCaption(color) {
     let taskCaption = document.createElement('div');
     taskCaption.className = 'task';
     taskCaption.style.backgroundColor = color;
-    taskCaption.addEventListener('click', eventSelect); // Parte da Questão 09
+    taskCaption.addEventListener('click', taskSelect); // Parte da Questão 09
 
     parent.appendChild(taskCaption);
 }
@@ -201,11 +202,27 @@ createTaskCaption('yellow');
 //   Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja,
 //   esta tarefa está deixando de ser uma tarefa selecionada.
 
+let taskSelectedColor; // Questão 10
 
-function eventSelect(task) {
+function taskSelect(task) {
      if (task.target.className == 'task') {
          task.target.className = 'task selected';
+         taskSelectedColor = task.target.style.backgroundColor; // Questão 10
      } else {
          task.target.className = 'task';
+         taskSelectedColor = 'rgb(119,119,119)'; // Questão 10
      }
+}
+
+// Questão 10
+
+// Implemente uma função que adiciona um evento que, ao clicar em um dia do mês no calendário,
+// atribua a este dia a cor da legenda da sua tarefa selecionada.
+//   Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar
+//   à configuração inicial rgb(119,119,119).
+
+function setTaskColorToDay(day) {
+    if (taskSelectedColor !== null || taskSelectedColor !== 'rgb(119,119,119)') {
+        day.target.style.color = taskSelectedColor;
+    }
 }
