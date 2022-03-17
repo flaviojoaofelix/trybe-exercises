@@ -186,14 +186,14 @@ function createTaskCaption(color) {
     let taskCaption = document.createElement('div');
     taskCaption.className = 'task';
     taskCaption.style.backgroundColor = color;
-    taskCaption.addEventListener('click', eventSelect);
+    taskCaption.addEventListener('click', eventSelect); // Parte da Questão 09
 
     parent.appendChild(taskCaption);
 }
 
 createTaskCaption('yellow');
 
-// Questão 9
+// Questão 09
 
 // Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div>
 // referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja,
