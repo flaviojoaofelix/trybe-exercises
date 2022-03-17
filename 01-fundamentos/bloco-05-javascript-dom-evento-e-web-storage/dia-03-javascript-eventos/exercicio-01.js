@@ -146,10 +146,34 @@ function dayZoom() {
     }
 }
 function dayZoomOver(day) {
-    day.target.style.fontSize = '40px';
+    day.target.style.fontSize = '25px';
 }
 function dayZoomOut(day) {
     day.target.style.fontSize = '20px';
 }
 
 dayZoom();
+
+// Questão 07
+
+// Implemente uma função que adiciona uma tarefa personalizada ao calendário.
+// A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar")
+// e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
+//   O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
+
+function createTask(task) {
+    parent = document.querySelector('.my-tasks');
+    let taskTag = document.createElement('span');
+    taskTag.innerText = task;
+
+    parent.appendChild(taskTag);
+}
+
+createTask('Cozinhar');
+
+// Questão 08:
+// Implemente uma função que adiciona uma legenda com cor para a tarefa criada no exercício anterior.
+// Esta função deverá receber como parâmetro uma string ("cor") e criar dinamicamente um elemento
+// de tag <div> com a classe task .
+//   O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada.
+//   O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
