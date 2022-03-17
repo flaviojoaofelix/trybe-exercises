@@ -85,11 +85,11 @@ createButtons('Feriados', 'btn-holiday', '.buttons-container');
 function highlightHolidays() {
     let holidays = document.querySelectorAll('.holiday');
     for (let i = 0; i < holidays.length; i += 1) {
-        btn = holidays[i];
-        if (btn.style.backgroundColor !== 'green') {
-            btn.style.backgroundColor = 'green';
+        let day = holidays[i];
+        if (day.style.backgroundColor !== 'green') {
+            day.style.backgroundColor = 'green';
         } else {
-            btn.style.backgroundColor = 'rgb(238,238,238)';
+            day.style.backgroundColor = 'rgb(238,238,238)';
         }
     }
 }
@@ -100,7 +100,7 @@ function buttonEvent(id, event) {
 
 buttonEvent('btn-holiday', highlightHolidays);
 
-// Questão 4:
+// Questão 04
 
 // Implemente uma função que receba como parâmetro a string "Sexta-feira"
 // e crie dinamicamente um botão com o nome "Sexta-feira".
@@ -108,3 +108,25 @@ buttonEvent('btn-holiday', highlightHolidays);
 //   Adicione este botão como filho/filha da tag <div> com classe "buttons-container"
 
 createButtons('Sexta-feira', 'btn-friday', '.buttons-container');
+
+// Questão 05
+
+// Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica
+// o texto exibido nos dias que são Sexta-feira.
+//   É interessante que este botão possua também a lógica inversa.
+//   Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
+
+function changeTextFriday() {
+    let fridays = document.querySelectorAll('.friday')
+    for (let i = 0; i < fridays.length; i += 1) {
+        let day = fridays[i];
+        if (day.innerText !== 'SEX')  {
+            day.innerText = 'SEX';
+        } else {
+            day.innerText = dezDaysFridays[i];
+        }
+
+    }
+}
+buttonEvent('btn-friday', changeTextFriday);
+
