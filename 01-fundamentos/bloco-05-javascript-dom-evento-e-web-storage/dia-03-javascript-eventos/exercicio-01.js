@@ -58,7 +58,8 @@ function verifyFridays(day, fridays) {
 
 createDays(dezDaysList, dezDaysFridays, dezDaysHolidays);
 
-// Exercício 2:
+// Questão 02
+
 // Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados".
 //   Adicione a este botão a ID "btn-holiday" .
 //   Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
@@ -73,3 +74,28 @@ function createButtons(name, id, parent) {
 }
 
 createButtons('Feriados', 'btn-holiday', '.buttons-container');
+
+// Questão 03
+
+// Implemente uma função que adicione ao botão "Feriados" um evento de "click"
+// que muda a cor de fundo dos dias que possuem a classe "holiday" .
+//   É interessante que este botão possua também a lógica inversa.
+//   Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
+
+function highlightHolidays() {
+    let holidays = document.querySelectorAll('.holiday');
+    for (let i = 0; i < holidays.length; i += 1) {
+        btn = holidays[i];
+        if (btn.style.backgroundColor !== 'green') {
+            btn.style.backgroundColor = 'green';
+        } else {
+            btn.style.backgroundColor = 'rgb(238,238,238)';
+        }
+    }
+}
+function buttonEvent(id, event) {
+    btnEvent = document.getElementById(id);
+    btnEvent.addEventListener('click', event);
+}
+
+buttonEvent('btn-holiday', highlightHolidays);
