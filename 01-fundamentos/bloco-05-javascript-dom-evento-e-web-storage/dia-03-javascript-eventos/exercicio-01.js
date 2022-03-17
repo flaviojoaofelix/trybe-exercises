@@ -88,8 +88,10 @@ function highlightHolidays() {
         let day = holidays[i];
         if (day.style.backgroundColor !== 'green') {
             day.style.backgroundColor = 'green';
+            day.style.color = 'yellow';
         } else {
             day.style.backgroundColor = 'rgb(238,238,238)';
+            day.style.color = '#777';
         }
     }
 }
@@ -171,7 +173,7 @@ function createTask(task) {
 
 createTask('Cozinhar');
 
-// Questão 08:
+// Questão 08
 
 // Implemente uma função que adiciona uma legenda com cor para a tarefa criada no exercício anterior.
 // Esta função deverá receber como parâmetro uma string ("cor") e criar dinamicamente um elemento
@@ -184,8 +186,26 @@ function createTaskCaption(color) {
     let taskCaption = document.createElement('div');
     taskCaption.className = 'task';
     taskCaption.style.backgroundColor = color;
+    taskCaption.addEventListener('click', eventSelect);
 
     parent.appendChild(taskCaption);
 }
 
 createTaskCaption('yellow');
+
+// Questão 9
+
+// Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div>
+// referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja,
+// quando sua tarefa possuir a classe task selected , ela estará selecionada.
+//   Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja,
+//   esta tarefa está deixando de ser uma tarefa selecionada.
+
+
+function eventSelect(task) {
+     if (task.target.className == 'task') {
+         task.target.className = 'task selected';
+     } else {
+         task.target.className = 'task';
+     }
+}
