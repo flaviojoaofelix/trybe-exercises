@@ -1,34 +1,3 @@
-///////////////////////
-// LISTA DE OBJETOS //
-// ESTILOS         //
-////////////////////
-
-const backgroundColorList = {
-    0: {
-        name: 'white',
-        style: 'background-white'
-    },
-    1: {
-        name: 'black',
-        style: 'background-black'
-    },
-    2: {
-        name: 'charchoal gray',
-        style: 'background-charcoalgray'
-    }
-};
-
-const textColorList = {
-    0: {
-        name: 'black',
-        style: 'color-black'
-    },
-    1: {
-        name: 'white',
-        style: 'color-white'
-    }
-};
-
 ////////////////////////
 // VARIÁVEIS GLOBAIS //
 //////////////////////
@@ -44,32 +13,21 @@ var textColorPos;
 
 // CONTROLES
 function controls() {
-    let ul = document.querySelector('aside').lastElementChild;
+    let parent = document.querySelector('aside').lastElementChild;
     
-    createChangeBackgroundControl(ul);
-    createChangeTextControl(ul);
+    createControl('Fundo', changeBackgroundColor, parent);
+    createControl('Texto', changeTextColor, parent);
+    createControl('Tamanho da Fonte', changeTextSize, parent)
 }
 
-// CONTROLES = MUDAR PLANO DE FUNDO
-function createChangeBackgroundControl(parent) {
-    let changeBackgroundControl = document.createElement('li');
-    
-    changeBackgroundControl.appendChild(createButton('+', 'button-plus', changeBackgroundColor));
-    changeBackgroundControl.appendChild(document.createTextNode('Fundo'));
-    changeBackgroundControl.appendChild(createButton('-', 'button-minus', changeBackgroundColor));
+function createControl(name, action, parent) {
+    let element = document.createElement('li');
 
-    parent.appendChild(changeBackgroundControl);
-}
+    element.appendChild(createButton('+', 'button-plus', action));
+    element.appendChild(document.createTextNode(name));
+    element.appendChild(createButton('-', 'button-minus', action));
 
-// CONTROLES - MUDAR TEXTO
-function createChangeTextControl(parent) {
-    let changeTextControl = document.createElement('li');
-    
-    changeTextControl.appendChild(createButton('+', 'button-plus', changeTextColor));
-    changeTextControl.appendChild(document.createTextNode('Texto'));
-    changeTextControl.appendChild(createButton('-', 'button-minus', changeTextColor));
-
-    parent.appendChild(changeTextControl);
+    parent.appendChild(element);
 }
 
 // CRIAR BOTÃO
