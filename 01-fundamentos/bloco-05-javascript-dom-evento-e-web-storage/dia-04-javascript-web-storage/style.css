@@ -1,3 +1,4 @@
+/* FUNDO */
 .background-white {
     background-color: white;
 }
@@ -16,6 +17,8 @@
 .background-orange {
     background-color: #FF9900;
 }
+
+/* TEXTO */
 .color-black {
     color: black;
 }
@@ -35,9 +38,25 @@
     color: #FFFF00;
 }
 
+/* BOTÕES */
 .button-plus {
     margin-right: 8px;
 }
 .button-minus {
     margin-left: 8px;
+}
+
+/* CABEÇALHO */
+h1 {
+    text-align: center;
+}
+
+/* LISTA */
+ul {
+    list-style: none;
+    display: inline-block;
+}
+li {
+    margin-left: 8px;
+    float: left;
 }

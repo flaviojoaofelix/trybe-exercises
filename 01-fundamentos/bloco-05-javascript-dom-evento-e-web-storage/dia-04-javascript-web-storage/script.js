@@ -13,13 +13,14 @@ var textColorPos;
 
 // CONTROLES
 function controls() {
-    let parent = document.querySelector('aside').lastElementChild;
+    let parent = document.querySelector('nav').lastElementChild;
     
     createControl('Fundo', changeBackgroundColor, parent);
     createControl('Texto', changeTextColor, parent);
     createControl('Tamanho da Fonte', changeTextSize, parent)
 }
 
+// CONTROLES - CRIAR CONTROLES
 function createControl(name, action, parent) {
     let element = document.createElement('li');
 
@@ -30,7 +31,7 @@ function createControl(name, action, parent) {
     parent.appendChild(element);
 }
 
-// CRIAR BOTÃO
+// CONTROLES - CRIAR BOTÃO
 function createButton(content, style, action) {
     let button = document.createElement('button');
     button.innerText = content;
@@ -80,6 +81,30 @@ function changeTextColor(info) {
     }
 
     document.body.classList.add(textColor);
+}
+
+// MUDAR TAMANHO DA FONTE
+function changeTextSize(info) {
+    let paragrafo = document.getElementsByTagName('p');
+    let button = info.target.innerText;
+    let style;
+    let fontSize;
+
+    console.log();
+    
+    for (let i = 0; i < paragrafo.length; i += 1) {
+        if (button === '+') {
+            style = window.getComputedStyle(paragrafo[i], null).getPropertyValue('font-size');
+            fontSize = parseFloat(style);
+            paragrafo[i].style.fontSize = (fontSize + 1) + 'px';
+        }
+
+        if (button === '-') {
+            style = window.getComputedStyle(paragrafo[i], null).getPropertyValue('font-size');
+            fontSize = parseFloat(style);
+            paragrafo[i].style.fontSize = (fontSize - 1) + 'px';
+        }
+    }
 }
 
 //////////////////////////////
