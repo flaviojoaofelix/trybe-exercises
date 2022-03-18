@@ -56,3 +56,5 @@ const textColorList = {
         style: 'color-yellow'
     }
 };
+
+const fontFamilyList = ['times', 'sans-serif', 'serif', 'fantasy', 'cursive', 'monospace'];

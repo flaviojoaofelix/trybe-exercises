@@ -6,6 +6,7 @@ var backgroundColor;
 var backgroundColorPos;
 var textColor;
 var textColorPos;
+var fontFamilyPos;
 
 //////////////
 // FUNÇÕES //
@@ -15,10 +16,11 @@ var textColorPos;
 function controls() {
     let parent = document.querySelector('nav').lastElementChild;
     
-    createControl('Fundo', changeBackgroundColor, parent);
-    createControl('Texto', changeTextColor, parent);
+    createControl('Cor de Fundo', changeBackgroundColor, parent);
+    createControl('Cor de Texto', changeTextColor, parent);
     createControl('Tamanho da Fonte', changeTextSize, parent);
-    createControl('Espaçamento Entre Linhas', changeSpacingBetweenLines, parent);
+    createControl('Tipo da Fonte' , changeFontFamily, parent);
+    createControl('Espaçamento', changeSpacingBetweenLines, parent);
 }
 
 // CONTROLES - CRIAR CONTROLES
@@ -111,6 +113,21 @@ function changeSpacingBetweenLines(info) {
     }
 }
 
+// MUDAR TIPO DE FONTE
+function changeFontFamily(info) {
+    let button = info.target.innerText;
+    let fonts = fontFamilyList.length
+
+    if (button === '+') {
+        fontFamilyPos >= fonts ? fontFamilyPos = 0 : fontFamilyPos += 1;
+    }
+    if (button === '-') {
+        fontFamilyPos <= 0 ? fontFamilyPos = fonts : fontFamilyPos -= 1;
+    }
+
+    document.body.style.fontFamily = fontFamilyList[fontFamilyPos];
+}
+
 //////////////////////////////
 // INICIALIZAÇÃO DA PÁGINA //
 ////////////////////////////
@@ -118,6 +135,8 @@ function changeSpacingBetweenLines(info) {
 window.onload = function() {
     setInitialBackgroundColor();
     setInitialTextColor();
+    setInitialTextColor();
+    setInitialFontFamily();
     controls();
 }
 
@@ -133,4 +152,9 @@ function setInitialTextColor() {
     textColor = textColorList[0].style;
     textColorPos = 0;
     document.body.classList.add(textColor);
+}
+
+function setInitialFontFamily() {
+    fontFamilyPos = 0;
+    document.body.style.fontFamily = fontFamilyList[fontFamilyPos];
 }
