@@ -38,5 +38,21 @@ const textColorList = {
     1: {
         name: 'white',
         style: 'color-white'
+    },
+    2: {
+        name: 'golden rod',
+        style: 'color-goldenrod'
+    },
+    3: {
+        name: 'green',
+        style: 'color-green'
+    },
+    4: {
+        name: 'purple',
+        style: 'color-purple'
+    },
+    5: {
+        name: 'yellow',
+        style: 'color-yellow'
     }
 };

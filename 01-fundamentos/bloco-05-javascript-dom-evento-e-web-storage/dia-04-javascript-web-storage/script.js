@@ -17,7 +17,8 @@ function controls() {
     
     createControl('Fundo', changeBackgroundColor, parent);
     createControl('Texto', changeTextColor, parent);
-    createControl('Tamanho da Fonte', changeTextSize, parent)
+    createControl('Tamanho da Fonte', changeTextSize, parent);
+    createControl('Espaçamento Entre Linhas', changeSpacingBetweenLines, parent);
 }
 
 // CONTROLES - CRIAR CONTROLES
@@ -64,13 +65,17 @@ function changeBackgroundColor(info) {
 function changeTextColor(info) {
     document.body.classList.remove(textColor);
 
-    if (info.target.innerText === '+') {
-        textColor = 'color-black';
+    let button = info.target.innerText;
+    let colors = Object.keys(textColorList).length - 1;
+
+    if (button === '+') {
+        textColorPos >= colors ? textColorPos = 0 : textColorPos += 1;
     }
-    if (info.target.innerText === '-') {
-        textColor = 'color-white';
+    if (button === '-') {
+        textColorPos <= 0 ? textColorPos = colors : textColorPos -= 1;
     }
 
+    textColor = textColorList[textColorPos].style;
     document.body.classList.add(textColor);
 }
 
