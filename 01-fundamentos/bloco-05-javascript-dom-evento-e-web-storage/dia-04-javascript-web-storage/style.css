@@ -1,0 +1,43 @@
+.background-white {
+    background-color: white;
+}
+.background-black {
+    background-color: black;
+}
+.background-charcoalgray {
+    background-color: #333333;
+}
+.background-goldenrod {
+    background-color: #FFCC66;
+}
+.background-indigoblue {
+    background-color: #330066;
+}
+.background-orange {
+    background-color: #FF9900;
+}
+.color-black {
+    color: black;
+}
+.color-white {
+    color: white;
+}
+.color-goldenrod {
+    color: #FFCC66;
+}
+.color-green {
+    color: #00FF00;
+}
+.color-purple {
+    color: #990099;
+}
+.color-yellow {
+    color: #FFFF00;
+}
+
+.button-plus {
+    margin-right: 8px;
+}
+.button-minus {
+    margin-left: 8px;
+}
