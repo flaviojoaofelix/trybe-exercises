@@ -50,19 +50,10 @@ function changeBackgroundColor(info) {
     let colors = Object.keys(backgroundColorList).length - 1;
 
     if (button === '+') {
-        if (backgroundColorPos >= colors) {
-            backgroundColorPos = 0;
-        } else {
-            backgroundColorPos += 1;
-        }
+        backgroundColorPos >= colors ? backgroundColorPos = 0 : backgroundColorPos += 1;
     }
-
     if (button === '-') {
-        if (backgroundColorPos <= 0) {
-            backgroundColorPos = colors;
-        } else {
-            backgroundColorPos -= 1;
-        }
+        backgroundColorPos <= 0 ? backgroundColorPos = colors : backgroundColorPos -= 1;
     }
 
     backgroundColor = backgroundColorList[backgroundColorPos].style;
@@ -89,21 +80,13 @@ function changeTextSize(info) {
     let button = info.target.innerText;
     let style;
     let fontSize;
-
-    console.log();
     
     for (let i = 0; i < paragrafo.length; i += 1) {
-        if (button === '+') {
-            style = window.getComputedStyle(paragrafo[i], null).getPropertyValue('font-size');
-            fontSize = parseFloat(style);
-            paragrafo[i].style.fontSize = (fontSize + 1) + 'px';
-        }
+        style = window.getComputedStyle(paragrafo[i], null).getPropertyValue('font-size');
+        fontSize = parseFloat(style);
 
-        if (button === '-') {
-            style = window.getComputedStyle(paragrafo[i], null).getPropertyValue('font-size');
-            fontSize = parseFloat(style);
-            paragrafo[i].style.fontSize = (fontSize - 1) + 'px';
-        }
+        if (button === '+') paragrafo[i].style.fontSize = (fontSize + 1) + 'px';
+        if (button === '-') paragrafo[i].style.fontSize = (fontSize - 1) + 'px';
     }
 }
 
