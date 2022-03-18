@@ -95,6 +95,22 @@ function changeTextSize(info) {
     }
 }
 
+// MUDAR ESPAÇO ENTRE LINHAS
+function changeSpacingBetweenLines(info) {
+    let paragrafo = document.getElementsByTagName('p');
+    let button = info.target.innerText;
+    let style;
+    let lineHeight;
+    
+    for (let i = 0; i < paragrafo.length; i += 1) {
+        style = window.getComputedStyle(paragrafo[i], null).getPropertyValue('line-height');
+        lineHeight = parseFloat(style);
+
+        if (button === '+') paragrafo[i].style.lineHeight = (lineHeight + 1) + 'px';
+        if (button === '-') paragrafo[i].style.lineHeight = (lineHeight - 1) + 'px';
+    }
+}
+
 //////////////////////////////
 // INICIALIZAÇÃO DA PÁGINA //
 ////////////////////////////

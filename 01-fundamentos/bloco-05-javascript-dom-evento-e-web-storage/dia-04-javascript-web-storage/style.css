@@ -60,3 +60,8 @@ li {
     margin-left: 8px;
     float: left;
 }
+
+/* PARÁGRAFOS */
+p {
+    line-height: 110%;
+}
