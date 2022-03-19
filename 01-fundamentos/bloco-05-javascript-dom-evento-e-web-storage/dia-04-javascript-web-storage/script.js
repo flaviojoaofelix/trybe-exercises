@@ -1,13 +1,3 @@
-////////////////////////
-// VARIÁVEIS GLOBAIS //
-//////////////////////
-
-var backgroundColor;
-var backgroundColorPos;
-var textColor;
-var textColorPos;
-var fontFamilyPos;
-
 //////////////
 // FUNÇÕES //
 ////////////
@@ -47,38 +37,38 @@ function createButton(content, style, action) {
 
 // MUDAR COR DE FUNDO
 function changeBackgroundColor(info) {
-    document.body.classList.remove(backgroundColor);
+    document.body.classList.remove(myPreferences.bkg.color);
 
     let button = info.target.innerText;
     let colors = Object.keys(backgroundColorList).length - 1;
 
     if (button === '+') {
-        backgroundColorPos >= colors ? backgroundColorPos = 0 : backgroundColorPos += 1;
+        myPreferences.bkg.colorPos >= colors ? myPreferences.bkg.colorPos = 0 : myPreferences.bkg.colorPos += 1;
     }
     if (button === '-') {
-        backgroundColorPos <= 0 ? backgroundColorPos = colors : backgroundColorPos -= 1;
+        myPreferences.bkg.colorPos <= 0 ? myPreferences.bkg.colorPos : myPreferences.bkg.colorPos -= 1;
     }
 
-    backgroundColor = backgroundColorList[backgroundColorPos].style;
-    document.body.classList.add(backgroundColor);
+    myPreferences.bkg.color = backgroundColorList[myPreferences.bkg.colorPos].style;
+    document.body.classList.add(myPreferences.bkg.color);
 }
 
 // MUDAR COR DO TEXTO
 function changeTextColor(info) {
-    document.body.classList.remove(textColor);
+    document.body.classList.remove(myPreferences.text.color);
 
     let button = info.target.innerText;
     let colors = Object.keys(textColorList).length - 1;
 
     if (button === '+') {
-        textColorPos >= colors ? textColorPos = 0 : textColorPos += 1;
+        myPreferences.text.colorPos >= colors ? myPreferences.text.colorPos = 0 : myPreferences.text.colorPos += 1;
     }
     if (button === '-') {
-        textColorPos <= 0 ? textColorPos = colors : textColorPos -= 1;
+        myPreferences.text.colorPos <= 0 ? myPreferences.text.colorPos = colors : myPreferences.text.colorPos -= 1;
     }
 
-    textColor = textColorList[textColorPos].style;
-    document.body.classList.add(textColor);
+    myPreferences.text.color = textColorList[myPreferences.text.colorPos].style;
+    document.body.classList.add(myPreferences.text.color);
 }
 
 // MUDAR TAMANHO DA FONTE
@@ -86,14 +76,20 @@ function changeTextSize(info) {
     let paragrafo = document.getElementsByTagName('p');
     let button = info.target.innerText;
     let style;
-    let fontSize;
     
     for (let i = 0; i < paragrafo.length; i += 1) {
         style = window.getComputedStyle(paragrafo[i], null).getPropertyValue('font-size');
-        fontSize = parseFloat(style);
+        myPreferences.text.size = parseFloat(style);
 
-        if (button === '+') paragrafo[i].style.fontSize = (fontSize + 1) + 'px';
-        if (button === '-') paragrafo[i].style.fontSize = (fontSize - 1) + 'px';
+        if (button === '+') {
+            myPreferences.text.size += 1;
+            paragrafo[i].style.fontSize = myPreferences.text.size + 'px';
+        }
+        
+        if (button === '-'){
+            myPreferences.text.size -= 1;
+            paragrafo[i].style.fontSize = myPreferences.text.size + 'px';
+        }
     }
 }
 
@@ -102,14 +98,19 @@ function changeSpacingBetweenLines(info) {
     let paragrafo = document.getElementsByTagName('p');
     let button = info.target.innerText;
     let style;
-    let lineHeight;
     
     for (let i = 0; i < paragrafo.length; i += 1) {
         style = window.getComputedStyle(paragrafo[i], null).getPropertyValue('line-height');
-        lineHeight = parseFloat(style);
+        myPreferences.text.lineH = parseFloat(style);
 
-        if (button === '+') paragrafo[i].style.lineHeight = (lineHeight + 1) + 'px';
-        if (button === '-') paragrafo[i].style.lineHeight = (lineHeight - 1) + 'px';
+        if (button === '+') {
+            myPreferences.text.lineH += 1;
+            paragrafo[i].style.lineHeight = myPreferences.text.lineH + 'px';
+        }
+        if (button === '-') {
+            myPreferences.text.lineH -= 1;
+            paragrafo[i].style.lineHeight = myPreferences.text.lineH + 'px';
+        }
     }
 }
 
@@ -119,13 +120,30 @@ function changeFontFamily(info) {
     let fonts = fontFamilyList.length
 
     if (button === '+') {
-        fontFamilyPos >= fonts ? fontFamilyPos = 0 : fontFamilyPos += 1;
+        myPreferences.text.fontPos >= fonts ? myPreferences.text.fontPos = 0 : myPreferences.text.fontPos += 1;
     }
     if (button === '-') {
-        fontFamilyPos <= 0 ? fontFamilyPos = fonts : fontFamilyPos -= 1;
+        myPreferences.text.fontPos <= 0 ? myPreferences.text.fontPos = fonts : myPreferences.text.fontPos -= 1;
     }
 
-    document.body.style.fontFamily = fontFamilyList[fontFamilyPos];
+    myPreferences.text.font = fontFamilyList[myPreferences.text.fontPos];
+    document.body.style.fontFamily = myPreferences.text.font;
+}
+
+///////////////////
+// PREFERÊNCIAS //
+/////////////////
+
+// SAVE
+function savePreferences () {
+    storage.setItem('userPreferences', JSON.stringify(myPreferences))
+    console.log(myPreferences);
+}
+
+// LOAD
+function loadPreferences () {
+    myPreferences = JSON.parse(storage.getItem('userPreferences'))
+    console.log(myPreferences);
 }
 
 //////////////////////////////
@@ -143,18 +161,19 @@ window.onload = function() {
 // INICIALIZAÇÃO - FUNÇÕES
 
 function setInitialBackgroundColor() {
-    backgroundColor = backgroundColorList[0].style;
-    backgroundColorPos = 0;
-    document.body.classList.add(backgroundColor);
+    myPreferences.bkg.color = backgroundColorList[0].style;
+    myPreferences.bkg.colorPos = 0;
+    document.body.classList.add(myPreferences.bkg.color);
 }
 
 function setInitialTextColor() {
-    textColor = textColorList[0].style;
-    textColorPos = 0;
-    document.body.classList.add(textColor);
+    myPreferences.text.color = textColorList[0].style;
+    myPreferences.text.colorPos = 0;
+    document.body.classList.add(myPreferences.text.color);
 }
 
 function setInitialFontFamily() {
-    fontFamilyPos = 0;
-    document.body.style.fontFamily = fontFamilyList[fontFamilyPos];
+    myPreferences.text.fontPos = 0;
+    myPreferences.text.font = fontFamilyList[myPreferences.text.fontPos];
+    document.body.style.fontFamily = myPreferences.text.font;
 }
