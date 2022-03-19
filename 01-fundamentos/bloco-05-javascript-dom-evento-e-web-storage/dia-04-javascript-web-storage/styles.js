@@ -1,35 +1,3 @@
-////////////////////////
-// VARIÁVEIS GLOBAIS //
-//////////////////////
-
-var backgroundColor;
-var backgroundColorPos;
-var textColor;
-var textColorPos;
-var fontFamily;
-var fontFamilyPos;
-var fontSize;
-
-///////////////////////
-// LISTA DE OBJETOS //
-// User Preference //
-////////////////////
-
-var myPreferences = {
-    bkg: {
-        color: '',
-        colorPos: ''
-    },
-    text: {
-        color: '',
-        colorPos: '',
-        font: '',
-        fontPos: '',
-        size: '',
-        lineH: '',
-    }
-}
-
 ///////////////////////
 // LISTA DE OBJETOS //
 // ESTILOS         //
