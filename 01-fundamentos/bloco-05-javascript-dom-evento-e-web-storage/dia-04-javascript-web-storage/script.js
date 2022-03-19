@@ -11,15 +11,20 @@ function controls() {
     createControl('Tamanho da Fonte', changeTextSize, parent);
     createControl('Tipo da Fonte' , changeFontFamily, parent);
     createControl('Espaçamento', changeSpacingBetweenLines, parent);
+    createControl('Resetar', resetPreferences, parent);
 }
 
 // CONTROLES - CRIAR CONTROLES
 function createControl(name, action, parent) {
     let element = document.createElement('li');
 
-    element.appendChild(createButton('+', 'button-plus', action));
-    element.appendChild(document.createTextNode(name));
-    element.appendChild(createButton('-', 'button-minus', action));
+    if (name !== 'Resetar') {
+        element.appendChild(createButton('+', 'button-plus', action));
+        element.appendChild(document.createTextNode(name));
+        element.appendChild(createButton('-', 'button-minus', action));
+    } else {
+        element.appendChild(createButton(name, 'button-plus', action));
+    }
 
     parent.appendChild(element);
 }
@@ -113,7 +118,7 @@ function changeSpacingBetweenLines(info) {
 // MUDAR TIPO DE FONTE
 function changeFontFamily(info) {
     let button = info.target.innerText;
-    let fonts = fontFamilyList.length
+    let fonts = fontFamilyList.length - 1;
 
     if (button === '+') {
         myPreferences.text.fontPos >= fonts ? myPreferences.text.fontPos = 0 : myPreferences.text.fontPos += 1;
@@ -124,8 +129,16 @@ function changeFontFamily(info) {
 
     myPreferences.text.font = fontFamilyList[myPreferences.text.fontPos];
     document.body.style.fontFamily = myPreferences.text.font;
-    
+
     savePreferences();
+}
+
+function resetPreferences() {
+    storage.removeItem('userPreferences');
+    document.body.classList.remove(myPreferences.bkg.color);
+    document.body.classList.remove(myPreferences.text.color);
+
+    start();
 }
 
 ///////////////////
@@ -146,66 +159,57 @@ function loadPreferences () {
 // INICIALIZAÇÃO DA PÁGINA //
 ////////////////////////////
 
-window.onload = function() {
-    let firstTime;
+window.onload = start;
 
-    if (storage.getItem('userPreferences') === null) {
-        firstTime = true;
-    } else {
-        firstTime = false;
+function start() {
+    if (storage.getItem('userPreferences') !== null) {
         loadPreferences();
+    } else {
+        setDefaultPreferences();
     }
 
-    setInitialBackgroundColor(firstTime);
-    setInitialTextColor(firstTime);
-    setInitialTextColor(firstTime);
-    setInitialFontFamily(firstTime);
-    setInitialFontHeight(firstTime);
-    setInitialFontSize(firstTime);
+    setInitialBackgroundColor();
+    setInitialTextColor();
+    setInitialTextColor();
+    setInitialFontFamily();
+    setInitialFontHeight();
+    setInitialFontSize();
     controls();
 }
 
 // INICIALIZAÇÃO - FUNÇÕES
 
-function setInitialBackgroundColor(status) {
-    if (status) {
-        myPreferences.bkg.color = backgroundColorList[0].style;
-        myPreferences.bkg.colorPos = 0
-    }
+function setInitialBackgroundColor() {
     document.body.classList.add(myPreferences.bkg.color);
 }
 
-function setInitialTextColor(status) {
-    if (status) {
-        myPreferences.text.color = textColorList[0].style;
-        myPreferences.text.colorPos = 0;
-    }
+function setInitialTextColor() {
     document.body.classList.add(myPreferences.text.color);
 }
 
-function setInitialFontSize(status) {
-    if (status) {
-        let fontSize = window.getComputedStyle(document.body, null).getPropertyValue('font-size');
-        myPreferences.text.size = parseFloat(fontSize);
-    } else {
-        let paragrafo = document.getElementsByTagName('p');
-        for (let i = 0; i < paragrafo.length; i += 1) {
-            paragrafo[i].style.fontSize = myPreferences.text.size + 'px';
-        }
+function setInitialFontSize() {
+    let paragrafo = document.getElementsByTagName('p');
+
+    for (let i = 0; i < paragrafo.length; i += 1) {
+        paragrafo[i].style.fontSize = myPreferences.text.size + 'px';
     }
 }
 
-function setInitialFontFamily(status) {
-    if (status) {
-        myPreferences.text.fontPos = 0;
-        myPreferences.text.font = fontFamilyList[myPreferences.text.fontPos];
-    }
+function setInitialFontFamily() {
     document.body.style.fontFamily = myPreferences.text.font;
 }
 
-function setInitialFontHeight(status) {
-    if (status) {
-        myPreferences.text.lineH = 110;
-    }
-    document.body.style.lineHeight = myPreferences.text.lineH + '%';    
+function setInitialFontHeight() {
+    document.body.style.lineHeight = myPreferences.text.lineH + '%';
+}
+
+function setDefaultPreferences() {
+    myPreferences.bkg.color = 'background-white';
+    myPreferences.bkg.colorPos = 0;
+    myPreferences.text.color = 'color-black';
+    myPreferences.text.colorPos = 0;
+    myPreferences.text.font = 'times'
+    myPreferences.text.fontPos = 0;
+    myPreferences.text.size = 16;
+    myPreferences.text.lineH = 110;
 }
