@@ -137,6 +137,7 @@ function resetPreferences() {
     storage.removeItem('userPreferences');
     document.body.classList.remove(myPreferences.bkg.color);
     document.body.classList.remove(myPreferences.text.color);
+    document.querySelector('nav').lastElementChild.innerHTML = '';
 
     start();
 }
