@@ -2,8 +2,21 @@
 ## Bloco 06 - dia 01
 ### HTML & CSS - Forms
 
+### Parte II
+#### Para Fixar:
+_parte-02-exemplo-01.html_
+
+Vamos praticar um pouco, criando uma tela de login? 🔥
+1. Adicione os campos de entrada para email e senha.
+2. Adicione um checkbox com o texto Lembre-me .
+3. Adicione um botão com o texto Entrar .
+4. Adicione os placeholder Digite seu email e Digite sua senha para os campos de email e senha.
+5. Adicione o atributo required para os campos de email e senha.
+6. Adicione o atributo autocomplete="off" para o campo de email.
+
+
 ### Parte IV
-#### Para fixar:
+#### Para Fixar:
 _parte-04-exemplo-01.html_
 _parte-04-exemplo-01.js_
 
@@ -28,6 +41,8 @@ Caso deseje entender melhor o comportamento do método .preventDefault() , acess
 
 ### Exercícios
 #### Criando um formulário para concorrer a uma viagem
+_exercicio-01-form.html_
+_exercicio-01-form.css_
 
 O exercício hoje será desenvolver uma página web com o formulário da TrybeTrip. Desenvolva-o em um arquivo chamado form.html . A estruturação de sua página deverá ficar semelhante com a imagem abaixo.
 
