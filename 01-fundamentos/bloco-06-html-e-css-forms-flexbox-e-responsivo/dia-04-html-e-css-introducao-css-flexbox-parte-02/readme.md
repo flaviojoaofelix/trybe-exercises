@@ -12,3 +12,8 @@ _exemplo-01.html_
 _exemplo-02.html_
 
 1. Copie o código abaixo e teste as possibilidades de ordenação.
+
+#### Exemplo 03 - Propriedades: flex-grow, flex-shrink, flex-basis
+_exemplo-03.html_
+
+1. Teste as possibilidades para a propriedade flex-grow .
