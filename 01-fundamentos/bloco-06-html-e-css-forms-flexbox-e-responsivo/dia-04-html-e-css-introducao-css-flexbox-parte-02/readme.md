@@ -9,5 +9,6 @@ _exemplo-01.html_
 1. Copie o código abaixo e no seu editor de código, teste as possibilidades para a propriedade align-self.
 
 #### Exemplo 02
+_exemplo-02.html_
 
 1. Copie o código abaixo e teste as possibilidades de ordenação.
