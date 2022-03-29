@@ -22,3 +22,6 @@ _exemplo-03.html_
 
 2. Teste as possibilidades para a propriedade flex-shrink .
 
+#### Exemplo 05 - Propriedades: flex-grow, flex-shrink, flex-
+
+3. Teste as possibilidades para a propriedade flex-basis .
