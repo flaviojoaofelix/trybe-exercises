@@ -4,7 +4,8 @@
 
 
 const getEmployees = (fullName) => {
-  const email = fullName.toLowerCase().split(' ').join('_');
+  // const email = fullName.toLowerCase().split(' ').join('_'); 
+  const email = fullName.toLowerCase().replace(' ', '_'); // Solução 02
   return { fullName, email: `${email}@trybe.com` };
 }
 
