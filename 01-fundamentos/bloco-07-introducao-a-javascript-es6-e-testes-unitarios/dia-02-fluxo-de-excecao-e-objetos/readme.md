@@ -5,6 +5,44 @@
 ### Exercícios
 #### Parte 01
 
+Lembra da calculadora que fizemos como exemplo anteriormente? Hora de levá-la para um nível mais avançado!
+Copie e cole o código abaixo no seu editor de texto:
+
+```
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Calculadora</title>
+</head>
+<body>
+  <p>Informe dois números para realizar a soma:</p>
+  <label for='value1'>Valor 1:</label>
+  <input type='text' id='value1'>
+  <label for='value2'>Valor 2:</label>
+  <input type='text' id='value2'>
+  <button id='button'>Somar</button>
+  <p id='result'></p>
+  <script>
+    function sum() {
+      const value1 = document.getElementById('value1').value;
+      const value2 = document.getElementById('value2').value;
+      const result = parseInt(value1) + parseInt(value2);
+      document.getElementById('result').innerHTML = `Resultado: ${result}`;
+      document.getElementById('value1').value = '';
+      document.getElementById('value2').value = '';
+    }
+    window.onload = () => {
+      const button = document.getElementById('button');
+      button.addEventListener('click', sum);
+    }
+  </script>
+</body>
+</html>
+```
+
 1. Crie um erro personalizado que será chamado se a pessoa usuária digitar apenas um número.
   - Tente executar a aplicação com um dos valores em branco. Notou que o retorno não é muito descritivo?
   - Utilize o throw new Error e o bloco try/catch .
@@ -15,6 +53,60 @@
 3. Você se lembrou de limpar os inputs após o clique do botão? Teve que repetir código para isso? Que tal refatorar sua função utilizando o finally ?
 
 #### Parte 02
+
+Para os exercícios a seguir, use o seguinte código.
+
+```
+const order = {
+  name: 'Rafael Andrade',
+  phoneNumber: '11-98763-1416',
+  address: {
+    street: 'Rua das Flores',
+    number: '389',
+    apartment: '701',
+  },
+  order: {
+    pizza: {
+      marguerita: {
+        amount: 1,
+        price: 25,
+      },
+      pepperoni: {
+        amount: 1,
+        price: 20,
+      }
+    },
+    drinks: {
+      coke: {
+        type: 'Coca-Cola Zero',
+        price: 10,
+        amount: 1,
+      }
+    },
+    delivery: {
+      deliveryPerson: 'Ana Silveira',
+      price: 5,
+    }
+  },
+  payment: {
+    total: 60,
+  },
+};
+
+const customerInfo = (order) => {
+  // Adicione abaixo as informações necessárias.
+
+}
+
+customerInfo(order);
+
+const orderModifier = (order) => {
+  // Adicione abaixo as informações necessárias.
+
+}
+
+orderModifier(order);
+```
 
 1. Complete a função customerInfo() para que seu retorno seja similar a "Olá Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, R. Rua das Flores, Nº: 389, AP: 701".
   - Note que o parâmetro da função já está sendo passado na chamada da função.
