@@ -32,3 +32,8 @@ const sortNumbers = () => {
 // Seu código aqui.
 
 console.log(`Ordem Crescente: ${sortNumbers()}`); // será necessário alterar essa linha 😉
+
+// Questão 02 - Bônus
+
+const sortArray = (arr) => arr.sort((a,b) => a - b);
+console.log(`Ordem Crescente usando sort: ${sortArray(oddsAndEvens)}`); 
