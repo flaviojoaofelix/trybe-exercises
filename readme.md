@@ -79,7 +79,7 @@ Contém todas as atividades desenvolvidas por __[mim](https://www.linkedin.com/i
 - [ ] 10.3 - Jest - Simulando comportamentos
 - [ ] 10.4 - Projeto - Jest Assíncrono e Mocking
 
-## Desenvolvimento Front-end :heavy_check_mark:
+## Desenvolvimento Front-end :hourglass_flowing_sand:
 
 ##### Bloco 11: [Introdução à React](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/02-front-end/bloco-11-introducao-a-react)
 - [ ] 11.1 - Introdução - Front-end
