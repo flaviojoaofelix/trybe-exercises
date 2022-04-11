@@ -62,3 +62,4 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
+exports.books = books;
