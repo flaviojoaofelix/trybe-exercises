@@ -44,6 +44,7 @@ _exercicio-01.js_
 ```
 
 #### Parte 02
+_exercicio-02.js_
 
 Abaixo, você verá algumas especificações de algoritmos para desenvolver. É fundamental que você utilize o que aprendeu sobre let , const , arrow functions , template literals e ternary operator .
 
@@ -58,6 +59,8 @@ Abaixo, você verá algumas especificações de algoritmos para desenvolver. É 
   longestWord('Antônio foi no banheiro e não sabemos o que aconteceu') // retorna 'aconteceu'
 ```
 
+_exercicio-02-questao-03.html_
+_exercicio-02-questao-03.js_
 3. Crie uma página que contenha:
   - Um botão ao qual será associado um event listener ;
   - Uma variável clickCount no arquivo JavaScript que acumule o número de clicks no botão;
