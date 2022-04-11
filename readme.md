@@ -50,22 +50,23 @@ Contém todas as atividades desenvolvidas por __[mim](https://www.linkedin.com/i
 - [x] 6.2 - Bibliotecas JavaScript e Frameworks CSS
 - [x] 6.3 - Introdução - CSS Flexbox
 - [x] 6.3 - CSS Flexbox - Parte 1
-- [ ] 6.4 - CSS Flexbox - Parte 2
+- [x] 6.4 - CSS Flexbox - Parte 2
 - [x] 6.5 - CSS Responsivo - Mobile First
 - [x] 6.6 - Projeto - Trybewarts (Em Dupla)
 
 ##### Bloco 7: [Introdução à JavaScript ES6 e Testes Unitários](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/01-fundamentos/bloco-07-introducao-a-javascript-es6-e-testes-unitarios)
-- [ ] 7.1 - JavaScript ES6 - let, const, arrow functions e template literals
-- [ ] 7.2 - JavaScript ES6 - Objects
-- [x] 7.3 - Testes unitários em JavaScript
+- [x] 7.1 - JavaScript ES6 - let, const, arrow functions e template literals
+- [x] 7.2 - JavaScript ES6 - Fluxo de exceção e Objetos
+- [x] 7.3 - Primeiros passos em Jest
 - [x] 7.4 - Projeto - JavaScript Testes Unitários (90% concluído)
 
 ##### Bloco 8: [Higher Order Functions do JavaScript ES6](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/01-fundamentos/bloco-08-high-order-functions-do-javascript-es6)
-- [x] 8.1 - JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort
-- [ ] 8.2 - JavaScript ES6 - Higher Order Functions - map e filter
-- [ ] 8.3 - JavaScript ES6 - Higher Order Functions - reduce
-- [ ] 8.4 - JavaScript ES6 - spread operator, parâmetro rest, destructuring e mais
-- [ ] 8.5 - Projeto - Zoo functions
+- [x] 8.1 - JavaScript ES6 - Introdução a Higher Order Functions
+- [x] 8.2 - JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort
+- [x] 8.3 - JavaScript ES6 - Higher Order Functions - map e filter
+- [ ] 8.4 - JavaScript ES6 - Higher Order Functions - reduce
+- [ ] 8.5 - JavaScript ES6 - spread operator, parâmetro rest, destructuring e mais
+- [ ] 8.6 - Projeto - Zoo functions
 
 ##### Bloco 9: [JavaScript Assíncrono e Promises](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/01-fundamentos/bloco-09-javascript-assincrono-e-promises)
 - [ ] 9.1 - JavaScript Assíncrono e Callbacks
