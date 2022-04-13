@@ -11,4 +11,3 @@ const averageAge = () => {
 }
 
 assert.deepStrictEqual(averageAge(), expectedResult);
-
