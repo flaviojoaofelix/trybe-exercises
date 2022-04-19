@@ -100,3 +100,77 @@ getCountry(countryName, printErrorMessage);
 // Deve imprimir "Brazil's currency is the Real" no sucesso, ou "Error getting country: Country could not be found" em caso de falha
 getCountry(countryCurrency, printErrorMessage);
 ```
+
+#### Testes Assíncronos com Callbacks - Exemplo 01
+_tacc-exemplo-01.test.js_
+
+```
+test('Não deveria passar!', () => {
+  setTimeout(() => {
+    expect(10).toBe(5);
+    console.log('Deveria falhar!');
+  }, 500);
+});
+```
+
+```
+test('Não deveria passar!', (done) => {
+  setTimeout(() => {
+    expect(10).toBe(5);
+    console.log('Deveria falhar!');
+    done();
+  }, 500);
+});
+```
+
+```
+test('Não deveria passar!', (done) => {
+  setTimeout(() => {
+    try {
+      expect(10).toBe(5);
+      console.log('Deveria falhar!');
+      done();
+    } catch (error) {
+      done();
+    }
+  }, 500);
+});
+```
+
+```
+test('Não deveria passar!', (done) => {
+  setTimeout(() => {
+    try {
+      expect(10).toBe(5);
+      console.log('Deveria falhar!');
+      done();
+    } catch (error) {
+      done(error); // Alteramos esta linha
+    }
+  }, 500);
+});
+```
+#### Testes Assíncronos com Callbacks - Exemplo 02
+_tacc-exemplo-02.test.js_
+
+Quando estiver realizando testes, é muito importante verificar se os resultados exibidos não são falso-positivos. No exemplo acima, em que o teste está passando, experimente mudar a implementação da função asyncSum para que retorne valores incorretos e verifique se o teste irá falhar. Por exemplo, se mudarmos os resultado para ser a + b + 1 o teste falha dizendo que esperava 15 , mas recebeu 16 .
+
+```
+const asyncSum = (a, b, callback) => {
+  setTimeout(() => {
+    const result = a + b;
+    callback(result);
+  }, 500);
+};
+
+test('Testando asyncSum, soma 5 mais 10', (done) => {
+  asyncSum(5, 10, (result) => {
+    try {
+      expect(result).toBe(15);
+      done();
+    } catch (error) {
+      done(error);
+    }
+  });
+});
+```
