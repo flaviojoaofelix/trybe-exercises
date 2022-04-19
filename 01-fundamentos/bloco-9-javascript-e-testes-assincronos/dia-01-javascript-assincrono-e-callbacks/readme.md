@@ -5,7 +5,7 @@
 
 ### Exemplos
 
-#### Exemplo 01
+#### Callbacks - Exemplo 01
 _callbacks-exemplo-01.js_
 
 1. Adicione uma callback como parâmetro da funcão getUser .
@@ -31,7 +31,7 @@ const getUser = () => {
 console.log(getUser()); // complete a chamada da função getUser de modo que o retorno seja: "Hello! My name is Ivan Ivanovich"
 console.log(getUser()); // complete a chamada da função getUser de modo que o retorno seja: "Ivan is Russian"
 ```
-#### Exemplo 02
+#### Callbacks - Exemplo 02
 _callbacks-exemplo-02.js_
 
 2. Passe, como parâmetro e como retorno, uma callback para a função getUser .
@@ -60,4 +60,43 @@ const getUser = () => {
 
 getUser(userFullName); // deve imprimir "Hello! My name is Ivan Ivanovich" depois de um certo tempo
 getUser(userNationality); // deve imprimir "Ivan is Russian" depois de um certo tempo
+```
+
+#### Lidando com erros em operações assíncronas - Exemplo 01
+_lceeoa-exemplo-01.js_
+
+1. Adicione uma callback e trate o erro retornado.
+A função getCountry abaixo tem aproximadamente 50% de chance em obter, com sucesso, um país. Ela utiliza uma callback para poder realizar qualquer operação sobre o país retornado.
+  - Adicione um segundo parâmetro, que deve ser uma callback , na função getCountry ;
+  - Retorne essa callback na função getCountry de forma que trate a mensagem de erro.
+
+```
+const countryName = ({ name }) => console.log(`Returned country is ${name}`);
+const countryCurrency = ({ name, currency }) => console.log(`${name}'s currency is the ${currency}`);
+
+const delay = (maxMilliseconds = 5000) => Math.floor(Math.random() * maxMilliseconds);
+
+const printErrorMessage = (error) => console.log(`Error getting country: ${error}`);
+
+const getCountry = (onSuccess) => {
+  setTimeout(() => {
+    const didOperationSucceed = Math.random() >= 0.5;
+    if(didOperationSucceed) {
+      const country = {
+        name: "Brazil",
+        hdi: 0.759,
+        currency: "Real",
+      };
+      onSuccess(country);
+    } else {
+      const errorMessage = "Country could not be found";
+    }
+  }, delay());
+};
+
+// Deve imprimir "Returned country is Brazil" no sucesso ou "Error getting country: Country could not be found" em caso de falha
+getCountry(countryName, printErrorMessage);
+
+// Deve imprimir "Brazil's currency is the Real" no sucesso, ou "Error getting country: Country could not be found" em caso de falha
+getCountry(countryCurrency, printErrorMessage);
 ```
