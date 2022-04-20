@@ -33,7 +33,7 @@ function getPokemonDetails(filter, callback) {
   }, 2000);
 }
 
-const pokeToSearch = 'Charmander';
+const pokeToSearch = 'Bulbasaur';
 getPokemonDetails(
   (pokemon) => pokemon.name === pokeToSearch,
   (error, message) => {
