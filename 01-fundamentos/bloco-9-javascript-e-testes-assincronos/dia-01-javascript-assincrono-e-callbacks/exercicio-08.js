@@ -45,6 +45,6 @@ getPokemonDetails(
   }
 );
 
-// module.exports = {
-//   getPokemonDetails,
-// };
+module.exports = {
+  getPokemonDetails,
+};
