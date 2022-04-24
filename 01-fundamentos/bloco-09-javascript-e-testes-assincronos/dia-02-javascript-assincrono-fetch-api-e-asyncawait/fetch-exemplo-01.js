@@ -31,7 +31,7 @@
 const fetch = require('node-fetch');
 
 const fetchJoke = () => {
-  const url = 'api.chucknorris.io/jokes/random?category=dev';
+  const url = 'https://api.chucknorris.io/jokes/random?category=dev';
 
   fetch(url)
     .then((response) => response.json())
@@ -40,3 +40,5 @@ const fetchJoke = () => {
 }
 
 fetchJoke();
+
+// Note que para forçar o erro retiramos o https:// do início da url .
