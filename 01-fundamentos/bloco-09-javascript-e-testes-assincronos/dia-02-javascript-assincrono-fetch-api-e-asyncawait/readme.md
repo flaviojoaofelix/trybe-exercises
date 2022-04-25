@@ -16,6 +16,7 @@ Responda às perguntas a seguir para ter certeza de que você entendeu os textos
 ### Exercícios
 
 #### Exercício 01
+_exercicio-01.html_
 
 1. Como primeiro exercício, vamos usar a função fetch , que vimos na aula ao vivo, para criar um site simples com um gerador de piadas ruins! . Como? Vamos praticar!
   - Primeiro, veja o manual da API do site icanhazdadjoke.com . Ele esclarece como fazer as requisições ao serviço de piadas. Por hora, pode só passar o olho; agora vamos entender como funciona essa API :
@@ -25,6 +26,7 @@ Responda às perguntas a seguir para ter certeza de que você entendeu os textos
     - Por fim, faça a requisição: curl -H "Accept: application/json" "https://icanhazdadjoke.com/" . Agora a API retorna um objeto no formato JSON. Perceba que, dependendo do que passamos na chave Accept: no header, definido por -H no comando, o serviço nos retorna uma resposta diferente.
     - Utilize o HTML e o js a seguir como base: (não se esqueça de utilizar a extensão Live Server e inspecionar o console do navegador para ver os logs)
 
+_exercicio-01.html_
 ```
 <!-- jokes.html -->
 <!DOCTYPE html>
@@ -40,6 +42,7 @@ Responda às perguntas a seguir para ter certeza de que você entendeu os textos
 </html>
 ```
 
+_exercicio-01.js_
 ```
 // apiScript.js
 const API_URL = 'https://icanhazdadjoke.com/';
