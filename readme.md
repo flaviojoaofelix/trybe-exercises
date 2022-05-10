@@ -87,16 +87,16 @@ Contém todas as atividades desenvolvidas por __[mim](https://www.linkedin.com/i
 - [ ] 11.2 - Formulários no React
 - [ ] 11.3 - Projeto - Movie Cards Library Stateful
 
-##### Bloco 12: [Ciclo de Vida de Componentes e React Router](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/02-front-end/bloco-13-ciclo-de-vida-de-componentes-e-react-router)
+##### Bloco 12: [Ciclo de Vida de Componentes e React Router](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/02-front-end/bloco-12-ciclo-de-vida-de-componentes-e-react-router)
 - [ ] 12.1 - Ciclo de vida de componentes
 - [ ] 12.2 - React Router
 - [ ] 12.3 - Projeto - Movie Cards Library CRUD
 
-##### Bloco 13: [Metodologias Ágeis](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/02-front-end/bloco-14-metodologias-ageis/dia-01-metodologias-ageis)
+##### Bloco 13: [Metodologias Ágeis](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/02-front-end/bloco-13-metodologias-ageis/dia-01-metodologias-ageis)
 - [ ] 13.1 - Metodologias Ágeis
 - [ ] 13.2 - Projeto - Frontend Online Store
 
-##### Bloco 14: [Testes automatizados com React Testing Library](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/02-front-end/bloco-15-testes-automatizados-com-react-testing-library)
+##### Bloco 14: [Testes automatizados com React Testing Library](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/02-front-end/bloco-14-testes-automatizados-com-react-testing-library)
 - [ ] 14.1 - RTL - Primeiros passos
 - [ ] 14.2 - RTL - Mocks e Inputs
 - [ ] 14.3 - RTL - Testando React Router
