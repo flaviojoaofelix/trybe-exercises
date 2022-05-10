@@ -12,6 +12,22 @@
 
 // Resposta: Promise { <pending> }
 
+//////////////////////////////////// Solução 02
+
+// const fetch = require('node-fetch');
+
+// const fetchJoke = () => {
+//   const url = 'https://api.chucknorris.io/jokes/random?category=dev';
+
+//   fetch(url)
+//     .then((response) => response.json())
+//     .then((data) => console.log(data.value));
+// }
+
+// fetchJoke();
+
+/////////////////////////////////// Solução Final
+
 const fetch = require('node-fetch');
 
 const fetchJoke = () => {
@@ -19,7 +35,10 @@ const fetchJoke = () => {
 
   fetch(url)
     .then((response) => response.json())
-    .then((data) => console.log(data.value));
+    .then((data) => console.log(data.value))
+    .catch((error) => console.log(`Algo deu errado :( \n${error}`));
 }
 
 fetchJoke();
+
+// Note que para forçar o erro retiramos o https:// do início da url .
