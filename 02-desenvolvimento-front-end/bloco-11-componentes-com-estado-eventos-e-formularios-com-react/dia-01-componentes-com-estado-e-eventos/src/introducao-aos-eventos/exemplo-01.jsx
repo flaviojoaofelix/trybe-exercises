@@ -17,7 +17,7 @@ function FancyButtons() {
   return (
     <div className="App">
       <header className="App-header">
-        <h2>Instrodução aos Eventos</h2>
+        <h2>Introdução aos Eventos</h2>
         <h3>Exemplo - 01</h3>
         <button onClick={ handleButtonOne }>Botão 1</button>
         <button onClick={ handleButtonTwo }>Botão 2</button>

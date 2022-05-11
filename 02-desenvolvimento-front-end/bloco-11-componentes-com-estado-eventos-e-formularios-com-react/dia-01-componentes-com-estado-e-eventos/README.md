@@ -12,4 +12,4 @@ _src/introducao-aos-eventos/exemplo-01.jsx_
 _src/vinculando-funcoes-a-classe-com-this-e-bind-no-constructor/exemplo-01.jsx_
 
 #### Unindo componentes com estados e eventos
-_/src/unindo-componentes-com-estados-e-eventos/exemplo-01.jsx_
+_src/unindo-componentes-com-estados-e-eventos/exemplo-01.jsx_
