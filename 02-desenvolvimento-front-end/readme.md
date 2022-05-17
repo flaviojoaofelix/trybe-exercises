@@ -8,12 +8,12 @@
 - [x] 10.3 - Projeto - Sistema Solar
 
 ##### Bloco 11: [Componentes com Estado, Eventos e Formulários com React](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/02-front-end/bloco-12-componentes-com-estado-eventos-e-formularios-com-react)
-- [ ] 11.1 - Componentes com estado e eventos
-- [ ] 11.2 - Formulários no React
-- [ ] 11.3 - Projeto - Movie Cards Library Stateful
+- [x] 11.1 - Componentes com estado e eventos
+- [x] 11.2 - Formulários no React
+- [x] 11.3 - Projeto - Tryunfo
 
 ##### Bloco 12: [Ciclo de Vida de Componentes e React Router](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/02-front-end/bloco-12-ciclo-de-vida-de-componentes-e-react-router)
-- [ ] 12.1 - Ciclo de vida de componentes
+- [x] 12.1 - Ciclo de vida de componentes
 - [ ] 12.2 - React Router
 - [ ] 12.3 - Projeto - Movie Cards Library CRUD
 
