@@ -33,7 +33,7 @@ const reducer = (state = initialState, action) => {
     case previousColor:
       return {
         ...state,
-        index: state.index > 0 ? state.index -= 1 : 0,
+        index: state.index > 0 ? state.index -= 1 : state.colors.length - 1,
       }
     case randomColor:
       state.colors.push(criarCor());
