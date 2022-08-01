@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  web:
+    image: nginx
+    volumes:
+      - ./public_html:/usr/share/nginx/public_html
+    ports:
+      - 8080:80
+    depends_on:
+      - banco
+
+  banco:
+    image: mysql:8.0.21
+    platform: linux/x86_64 # Necessário para usuários Mac com processador M1
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD: "root"
+      - MYSQL_USER: "root"
+
+  turma21:
+    build: .
+    ports:
+      - 3000:3000
+    
