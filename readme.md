@@ -73,7 +73,7 @@ Contém todas as atividades desenvolvidas por __[mim](https://www.linkedin.com/i
 - [x] 9.2 - JavaScript Promises
 - [x] 9.3 - Projeto - Carrinho de Compras
 
-## Desenvolvimento Front-end :hourglass_flowing_sand:
+## Desenvolvimento Front-end :heavy_check_mark:
 
 ##### Bloco 10: [Introdução à React](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/02-desenvolvimento-front-end/bloco-10-introducao-a-react)
 - [x] 10.1 - Introdução - Front-end
@@ -106,28 +106,28 @@ Contém todas as atividades desenvolvidas por __[mim](https://www.linkedin.com/i
 - [x] 15.1 - Introdução ao Redux - O estado global da aplicação
 - [x] 15.2 - Usando o Redux no React
 - [x] 15.3 - Usando o Redux no React - Prática
-- [ ] 15.4 - Usando o Redux no React - Actions Assíncronas
-- [ ] 15.5 - Testes em React-Redux
-- [ ] 15.6 - Projeto - Tabela com filtros de dados
+- [x] 15.4 - Usando o Redux no React - Actions Assíncronas
+- [x] 15.5 - Testes em React-Redux
+- [x] 15.6 - Projeto - Trybe Wallet
 
 ##### Bloco 16: Projeto Jogo de Trivia
-- [ ] 16.1 - Projeto - Jogo de Trivia
+- [x] 16.1 - Projeto - Jogo de Trivia
 
 ##### Bloco 17: [Context API e React Hooks](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/02-front-end/bloco-17-context-api-e-react-hooks)
-- [ ] 17.1 - Context API do React
-- [ ] 17.2 - React Hooks - useState e useContext
-- [ ] 17.3 - React Hooks - useEffect e Hooks customizados
-- [ ] 17.4 - Projeto - StarWars Datatable com Context API e Hooks
+- [x] 17.1 - Context API do React
+- [x] 17.2 - React Hooks - useState e useContext
+- [x] 17.3 - React Hooks - useEffect e Hooks customizados
+- [x] 17.4 - Projeto - StarWars Datatable com Context API e Hooks
 
 ##### Bloco 18: Projeto App de Receitas
-- [ ] 18.1 - Projeto - App de Receitas
+- [x] 18.1 - Projeto - App de Receitas
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
 ##### Bloco 19: [Docker: Utilizando Containers](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/03-docker-back-end/bloco-19-docker-utilizando-containers)
-- [ ] 19.1 - Introdução - Back-end
-- [ ] 19.1 - Utilizando Containers - Docker
-- [ ] 19.2 - Manipulação e Criação de Imagens no Docker
+- [x] 19.1 - Introdução - Back-end
+- [x] 19.1 - Utilizando Containers - Docker
+- [x] 19.2 - Manipulação e Criação de Imagens no Docker
 - [ ] 19.3 - Orquestrando Containers com Docker Compose
 - [ ] 19.4 - Projeto - Docker Todo-List
 
