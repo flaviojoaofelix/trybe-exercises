@@ -64,5 +64,9 @@ Para encerrar o terminal interno do container, o comando exit foi utilizado.
 ```
 
 12. Remova somente o container criado para esse exercício.
+```
+Foi utilizado o comando docker container rm <CONTAINER ID || NAMES>, validado em seguida.
+```
+
 [BÔNUS] Crie e rode de modo interativo em modo 'Cleanup', a imagem andrius/ascii-patrol.
 [BÔNUS] **Encerre o container utilizando os botões [ctrl] + [c].
