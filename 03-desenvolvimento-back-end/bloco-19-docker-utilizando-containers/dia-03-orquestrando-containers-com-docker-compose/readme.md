@@ -96,6 +96,11 @@ Agora vamos praticar os conceitos de volumes e networks.
 2. Em vez de utilizar a rede padrão criada pelo Compose, defina uma rede chamada my-network para a comunicação dos dois serviços.
 3. Suba o ambiente com o novo arquivo usando o docker-compose e então acesse-o.
 
+_/exercicio-04/docker-compose.yaml_
+```
+docker-compose up -d
+```
+
 #### Exercício 5:
 Agora vamos criar um novo arquivo Compose para rodarmos uma aplicação React, conforme vimos alguns exemplos do conteúdo:
 
