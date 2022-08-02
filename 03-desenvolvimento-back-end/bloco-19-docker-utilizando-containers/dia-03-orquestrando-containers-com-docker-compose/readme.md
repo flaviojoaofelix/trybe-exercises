@@ -110,5 +110,37 @@ Agora vamos criar um novo arquivo Compose para rodarmos uma aplicação React, c
 4. Defina um serviço no arquivo para nosso app. Para isso, utilize a opção build para apontar para o Dockerfile;
 5. Publique a porta exposta no Dockerfile fazendo bind para a porta 8080 do localhost;
 
+_/exercicio-05/docker-compose.yaml_
+
 #### Exercício 6:
 Para simularmos o processo de desenvolvimento, faça a alteração em alguma parte do código do app react. Então, execute o comando para subir o serviço novamente, "rebuildando" a imagem para aplicar as alterações.
+
+```
+docker-compose up --build -d
+```
+
+#### Exercício 7:
+Crie um arquivo Compose para subir o Wordpress com MySQL:
+
+1. Utilize a imagem wordpress:latest e mysql:5.7;
+2. Faça bind da porta 80 do contêiner do wordpress para 8080 do host;
+3. Defina as seguintes variáveis para o wordpress:
+  - WORDPRESS_DB_HOST: db:3306
+  - WORDPRESS_DB_USER: wordpress
+  - WORDPRESS_DB_PASSWORD: wordpress
+  - WORDPRESS_DB_NAME: wordpress
+4. Defina as seguintes variáveis para o mysql:
+  - MYSQL_ROOT_PASSWORD: somewordpress
+  - MYSQL_DATABASE: wordpress
+  - MYSQL_USER: wordpress
+  - MYSQL_PASSWORD: wordpress
+5. Defina o volume db_data para o mysql;
+6. Utilize o parâmetro depends_on para criar dependência entre os serviços;
+7. Adicione a política de restart com o valor always aos serviços;
+8. Suba os serviços utilizando docker-compose e abra no terminal para validar o funcionamento.
+
+```
+Esse exercício tem na própria documentação oficial e possui algumas considerações especiais, vale a pena dar uma olhada! 😉
+```
+
+_/exercicio-07/docker-compose.yaml_
