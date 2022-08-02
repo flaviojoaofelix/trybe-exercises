@@ -52,8 +52,18 @@ docker rm <COLOQUE AQUI SEU CONTAINER ID>
 ```
 
 9. Verifique se a pasta onde você salvou o arquivo html permanece no mesmo lugar;
+
 10. Obtenha o IMAGE ID do servidor;
+```
+docker images
+```
+
 11. Depois de obter o IMAGE ID, exclua a imagem.
+```
+docker rmi -f <COLOQUE AQUI SEU IMAGE ID>
+ ou
+docker image rm <COLOQUE AQUI SEU IMAGE ID>
+```
 
 #### 🚀 Exercício 2:
 Crie o arquivo Compose para subir um ghost blog. Essa plataforma é similar ao Wordpress e é utilizada para criar sites de conteúdo. Você pode ler no site oficial como criar conteúdos nele e utilizá-lo. Para esse exercício, utilizaremos apenas sua página de exemplo:
