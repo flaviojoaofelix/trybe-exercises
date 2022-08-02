@@ -44,6 +44,10 @@ Para listar o container, podemos utilizar o comando abreviado docker ps -l, assi
 ```
 
 8. Inicie o mesmo container novamente, sem criar outro. Valide se ele está ativo na lista de containers.
+```
+Na ilustração acima, foi utilizado o comando abreviado docker start <CONTAINER ID || NAMES> onde <CONTAINER ID || NAMES> foi o início do identificador único 07c0a580d818 (mostrando que não é preciso passar o valor inteiro), o container ficou ativo (campo STATUS) após isso.
+```
+
 9. Retome o container que foi criado anteriormente neste exercício.
 10. Rode o comando cat /etc/debian_version que deve retornar a versão atual do sistema do container.
 11. Encerre o terminal.
