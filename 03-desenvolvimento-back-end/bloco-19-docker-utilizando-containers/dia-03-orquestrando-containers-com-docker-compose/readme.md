@@ -11,7 +11,7 @@ Vamos aprimorar nossos conhecimentos sobre images e volumes, para isso:
 
 1. Crie um arquivo HTML chamado missao_trybe.html que tenha a seguinte estrutura:
   - Tag <title> com o seguinte texto "Trybe";
-  - Tag <H1> com o seguinte texto "Missão da Trybe";
+  - Tag '<h1>' com o seguinte texto "Missão da Trybe";
   - Tag <p> com o seguinte texto "Gerar oportunidade para pessoas";
   - Salve o arquivo em qualquer lugar da sua máquina com a extensão html
 
