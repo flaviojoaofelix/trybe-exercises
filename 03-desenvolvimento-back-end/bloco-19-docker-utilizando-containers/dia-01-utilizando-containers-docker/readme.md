@@ -49,6 +49,10 @@ Na ilustração acima, foi utilizado o comando abreviado docker start <CONTAINER
 ```
 
 9. Retome o container que foi criado anteriormente neste exercício.
+```
+Foi utilizado o comando abreviado docker attach <CONTAINER ID || NAMES>. Já que o container foi inicializado anteriormente de modo interativo, pudemos retomar seu terminal.
+```
+
 10. Rode o comando cat /etc/debian_version que deve retornar a versão atual do sistema do container.
 11. Encerre o terminal.
 12. Remova somente o container criado para esse exercício.
