@@ -54,6 +54,10 @@ Foi utilizado o comando abreviado docker attach <CONTAINER ID || NAMES>. Já que
 ```
 
 10. Rode o comando cat /etc/debian_version que deve retornar a versão atual do sistema do container.
+```
+Foi utilizado o comando cat /etc/debian_version, que retorna o número da atual versão estável do Debian (11.0).
+```
+
 11. Encerre o terminal.
 12. Remova somente o container criado para esse exercício.
 [BÔNUS] Crie e rode de modo interativo em modo 'Cleanup', a imagem andrius/ascii-patrol.
