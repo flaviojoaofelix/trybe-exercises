@@ -21,6 +21,10 @@ docker run -d --name site-trybe -p 4545:80 -v "<CAMINHO DO DIRETÓRIO ONDE ESTÁ
 ```
 
 3. Após criar o contêiner, acesse a página HTML que está rodando no servidor em seu browser.
+```
+http://localhost:4545/missao_trybe.html
+```
+
 4. Acesse o arquivo missao_trybe.html e acrescente a tag <p> com o seguinte texto: "Nosso negócio é GENTE! #VQV";
 5. Obtenha o id do contêiner httpd:2.4;
 6. Obtenha o Mounts através da propriedade Source, que deve mostrar o volume desse contêiner no Docker Host;
