@@ -12,6 +12,10 @@ No campo de busca do Docker Hub, você pode procurar por diversas imagens (inclu
 ```
 
 2. Uma vez que encontrar a imagem oficial, acesse-a (clicando em seu card) e verifique na página de detalhes. Confira se existe algum comando para baixar a imagem localmente sem ter que criar um container para isso.
+```
+Ao acessar a página de detalhes, logo de cara, a página já indica o comando docker pull <imagem>, esse comando faz apenas o download da imagem, sem o processo de criação e execução do container.
+```
+
 3. Baixe a imagem utilizando a tag: stable-slim, que é uma versão reduzida da distribuição.
 4. Após baixar a imagem para seu computador local, crie e execute um container no modo interativo utilizando essa imagem como referência — não esqueça referenciar a tag.
 5. No terminal, você deve conseguir rodar o comando cat /etc/*-release, que vai retornar os dados da distribuição Debian que está sendo rodada dentro do container.
