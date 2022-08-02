@@ -73,4 +73,7 @@ Foi utilizado o comando docker container rm <CONTAINER ID || NAMES>, validado em
 ⚠️ Você descobriu o jogo ASCII-PATROL! ⚠️ Para rodar o container e removê-lo logo em seguida (cleanup), foi utilizado o comando docker run -it --rm andrius/ascii-patrol, onde o -it permite a interação com o jogo pelo terminal e o --rm garante que o container será removido ao terminar o jogo.
 ```
 
-[BÔNUS] **Encerre o container utilizando os botões [ctrl] + [c].
+14. [BÔNUS] **Encerre o container utilizando os botões [ctrl] + [c].
+```
+Após fechar o jogo, utilize o comando clear para limpar a tela. Você pode constatar que, rodando um docker container ls -a, o container do jogo não estará presente.
+```
