@@ -29,6 +29,10 @@ Para criar e executar nosso container, usamos o comando docker container run -it
 ```
 
 5. No terminal, você deve conseguir rodar o comando cat /etc/*-release, que vai retornar os dados da distribuição Debian que está sendo rodada dentro do container.
+```
+Ao rodar o comando cat /etc/*-release foram retornados os dados corretos da distribuição estável do Debian (versão 11, codinome bullseye).
+```
+
 6. Encerre o terminal.
 7. Verifique na sua lista de containers qual container se refere ao exercício que acabou de praticar.
 8. Inicie o mesmo container novamente, sem criar outro. Valide se ele está ativo na lista de containers.
