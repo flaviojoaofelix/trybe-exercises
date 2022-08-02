@@ -22,6 +22,12 @@ Para executar esta ação, digite o comando docker pull:stable-slim. As tags tam
 ```
 
 4. Após baixar a imagem para seu computador local, crie e execute um container no modo interativo utilizando essa imagem como referência — não esqueça referenciar a tag.
+```
+Para criar e executar nosso container, usamos o comando docker container run -it debian:stable-slim, lembrando que a imagem pode ser chamada no formato <imagem>:<tag>.
+  Outra solução também pode ser com o uso do comando create, que cria o container, mas não o inicia imediatamente.
+  Primeiro utilizamos o comando docker container create -it debian:stable-slim, para criar um container. Como esse comando gera um CONTAINER ID, podemos utilizá-lo como referência para o segundo passo, com o comando start, como em docker container start -i <CONTAINER ID>, dessa forma, iniciamos o container no modo interativo.
+```
+
 5. No terminal, você deve conseguir rodar o comando cat /etc/*-release, que vai retornar os dados da distribuição Debian que está sendo rodada dentro do container.
 6. Encerre o terminal.
 7. Verifique na sua lista de containers qual container se refere ao exercício que acabou de praticar.
