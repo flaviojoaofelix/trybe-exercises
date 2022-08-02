@@ -18,6 +18,10 @@ Vamos aprimorar nossos conhecimentos sobre images e volumes, para isso:
 2. Crie um contêiner para manter um servidor httpd:2.4 Apache e vincule sua porta interna com a porta 4545 da sua máquina local.
 ```
 docker run -d --name site-trybe -p 4545:80 -v "<CAMINHO DO DIRETÓRIO ONDE ESTÁ SEU HTML>:/usr/local/apache2/htdocs" httpd:2.4
+
+docker run -d --name site-trybe -p 4545:80 -v "/home/flavio/Trybe/trybe-exercises/03-desenvolvimento-back-end/bloco-19-docker-utilizando-containers/dia-03-orquestrando-containers-com-docker-compose/exercicio-01:/usr/local/apache2/htdocs" httpd:2.4
+
+💡Dica: para descobrir o caminho atual, basta digitar pwd.
 ```
 
 3. Após criar o contêiner, acesse a página HTML que está rodando no servidor em seu browser.
@@ -26,8 +30,17 @@ http://localhost:4545/missao_trybe.html
 ```
 
 4. Acesse o arquivo missao_trybe.html e acrescente a tag <p> com o seguinte texto: "Nosso negócio é GENTE! #VQV";
+
 5. Obtenha o id do contêiner httpd:2.4;
+```
+docker ps
+```
+
 6. Obtenha o Mounts através da propriedade Source, que deve mostrar o volume desse contêiner no Docker Host;
+```
+docker inspect <COLOQUE AQUI SEU CONTAINER ID>
+```
+
 7. Agora pare o contêiner httpd:2.4;
 8. Exclua o seu contêiner;
 9. Verifique se a pasta onde você salvou o arquivo html permanece no mesmo lugar;
