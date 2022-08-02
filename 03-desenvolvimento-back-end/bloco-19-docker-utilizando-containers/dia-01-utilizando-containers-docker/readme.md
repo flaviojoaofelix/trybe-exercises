@@ -34,6 +34,10 @@ Ao rodar o comando cat /etc/*-release foram retornados os dados corretos da dist
 ```
 
 6. Encerre o terminal.
+```
+Para encerrar o terminal interno do container, o comando exit foi utilizado.
+```
+
 7. Verifique na sua lista de containers qual container se refere ao exercício que acabou de praticar.
 8. Inicie o mesmo container novamente, sem criar outro. Valide se ele está ativo na lista de containers.
 9. Retome o container que foi criado anteriormente neste exercício.
