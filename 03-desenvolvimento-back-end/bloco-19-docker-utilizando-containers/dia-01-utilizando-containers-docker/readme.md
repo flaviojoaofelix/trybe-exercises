@@ -17,6 +17,10 @@ Ao acessar a página de detalhes, logo de cara, a página já indica o comando d
 ```
 
 3. Baixe a imagem utilizando a tag: stable-slim, que é uma versão reduzida da distribuição.
+```
+Para executar esta ação, digite o comando docker pull:stable-slim. As tags também podem ser acessadas pela página de detalhes da imagem (onde também é fornecido o comando para executar).
+```
+
 4. Após baixar a imagem para seu computador local, crie e execute um container no modo interativo utilizando essa imagem como referência — não esqueça referenciar a tag.
 5. No terminal, você deve conseguir rodar o comando cat /etc/*-release, que vai retornar os dados da distribuição Debian que está sendo rodada dentro do container.
 6. Encerre o terminal.
