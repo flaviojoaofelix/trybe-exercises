@@ -42,7 +42,15 @@ docker inspect <COLOQUE AQUI SEU CONTAINER ID>
 ```
 
 7. Agora pare o contêiner httpd:2.4;
+```
+docker stop <COLOQUE AQUI SEU CONTAINER ID>
+```
+
 8. Exclua o seu contêiner;
+```
+docker rm <COLOQUE AQUI SEU CONTAINER ID>
+```
+
 9. Verifique se a pasta onde você salvou o arquivo html permanece no mesmo lugar;
 10. Obtenha o IMAGE ID do servidor;
 11. Depois de obter o IMAGE ID, exclua a imagem.
