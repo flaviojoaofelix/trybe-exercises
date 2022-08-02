@@ -39,6 +39,10 @@ Para encerrar o terminal interno do container, o comando exit foi utilizado.
 ```
 
 7. Verifique na sua lista de containers qual container se refere ao exercício que acabou de praticar.
+```
+Para listar o container, podemos utilizar o comando abreviado docker ps -l, assim como docker container ls -l, (para mostrar qual foi o último container criado); ou se quisermos mostrar todos, usamos o comando docker ps -a.
+```
+
 8. Inicie o mesmo container novamente, sem criar outro. Valide se ele está ativo na lista de containers.
 9. Retome o container que foi criado anteriormente neste exercício.
 10. Rode o comando cat /etc/debian_version que deve retornar a versão atual do sistema do container.
