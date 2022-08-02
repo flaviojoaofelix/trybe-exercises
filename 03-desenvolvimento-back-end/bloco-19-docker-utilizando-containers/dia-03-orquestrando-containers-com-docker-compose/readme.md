@@ -87,6 +87,8 @@ Por padrão, o ghost utiliza um sqlite interno para salvar as informações, por
 7. Utilize a opção depends_on para criar relações de dependências entre os serviços.
 8. Suba o ambiente com o novo arquivo usando o docker-compose e então acesse a porta.
 
+_/exercicio-03/docker-compose.yaml_
+
 #### Exercício 4:
 Agora vamos praticar os conceitos de volumes e networks.
 
