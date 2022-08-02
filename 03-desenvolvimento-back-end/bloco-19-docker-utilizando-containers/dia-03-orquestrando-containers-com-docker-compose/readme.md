@@ -73,6 +73,8 @@ Crie o arquivo Compose para subir um ghost blog. Essa plataforma é similar ao W
 3. Publique a porta 2368, fazendo bind também para a 2368;
 4. Suba a aplicação utilizando o docker-compose e então acesse a porta publicada para validar se deu tudo certo.
 
+_/exercicio-02/docker-compose.yaml_
+
 #### 🚀 Exercício 3:
 Por padrão, o ghost utiliza um sqlite interno para salvar as informações, porém vamos alterar esse comportamento para exercitar nossos conhecimentos:
 
