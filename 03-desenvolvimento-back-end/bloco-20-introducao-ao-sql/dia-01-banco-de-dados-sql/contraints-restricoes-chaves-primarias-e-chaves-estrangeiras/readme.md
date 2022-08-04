@@ -1,3 +1,11 @@
+## Constraints
+
+- NOT NULL
+- UNIQUE
+- PRIMARY KEY
+- FOREIGN KEY
+- DEFAULT
+
 ## Exercícios de fixação
 
 Então, tendo esses aprendizados em mente, vamos tentar chegar a algumas conclusões utilizando como exemplo a tabela a seguir:
