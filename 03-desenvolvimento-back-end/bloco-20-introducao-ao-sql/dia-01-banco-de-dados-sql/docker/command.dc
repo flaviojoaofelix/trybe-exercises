@@ -1,0 +1,1 @@
+docker run -p 3306:3306 --name trybe_mysql -e MYSQL_ROOT_PASSWORD=sua_senha -d mysql:5.7
