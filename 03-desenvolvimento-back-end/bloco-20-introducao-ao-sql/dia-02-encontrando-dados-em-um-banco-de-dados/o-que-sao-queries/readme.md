@@ -12,6 +12,8 @@
   - UPDATE: Altera dados dentro de uma tabela;
   - DELETE: Exclui dados de uma tabela.
 
+  * Comandos CRUD: Create - Read - Update - Delete
+
 - DCL: Data Control Language - Mais focado nos comandos que concedem direitos, permissões e outros tipos de controle ao sistema de banco de dados.
   - GRANT: Concede acesso a um usuário;
   - REVOKE: Remove acessos concedidos através do comando GRANT.
