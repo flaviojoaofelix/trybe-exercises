@@ -1,5 +1,5 @@
 # Trybe
-## Bloco 20 - dia 012
+## Bloco 20 - dia 02
 ### Introdução à SQL
 ### Encontrando dados em um banco de dados
 
