@@ -128,13 +128,13 @@ Contém todas as atividades desenvolvidas por __[mim](https://www.linkedin.com/i
 - [x] 19.1 - Introdução - Back-end
 - [x] 19.1 - Utilizando Containers - Docker
 - [x] 19.2 - Manipulação e Criação de Imagens no Docker
-- [ ] 19.3 - Orquestrando Containers com Docker Compose
-- [ ] 19.4 - Projeto - Docker Todo-List
+- [x] 19.3 - Orquestrando Containers com Docker Compose
+- [x] 19.4 - Projeto - Docker Todo-List
 
 ##### Bloco 20: [Introdução à SQL](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/03-desenvolvimento-back-end/bloco-20-introducao-a-sql)
-- [ ] 20.1 - Introdução - Bancos de dados relacionais
-- [ ] 20.1 - Banco de dados SQL
-- [ ] 20.2 - Encontrando dados em um banco de dados
+- [x] 20.1 - Introdução - Bancos de dados relacionais
+- [x] 20.1 - Banco de dados SQL
+- [x] 20.2 - Encontrando dados em um banco de dados
 - [ ] 20.3 - Filtrando dados de forma específica
 - [ ] 20.4 - Manipulando tabelas
 - [ ] 20.5 - Projeto - All For One
