@@ -120,7 +120,7 @@ Contém todas as atividades desenvolvidas por __[mim](https://www.linkedin.com/i
 - [x] 17.4 - Projeto - StarWars Datatable com Context API e Hooks
 
 ##### Bloco 18: Projeto App de Receitas
-- [x] 18.1 - Projeto - App de Receitas
+- [x] 18.1 - [Projeto - App de Receitas](https://github.com/flaviojoaofelix/trybe-project-recipes-app)
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
@@ -129,18 +129,18 @@ Contém todas as atividades desenvolvidas por __[mim](https://www.linkedin.com/i
 - [x] 19.1 - Utilizando Containers - Docker
 - [x] 19.2 - Manipulação e Criação de Imagens no Docker
 - [x] 19.3 - Orquestrando Containers com Docker Compose
-- [x] 19.4 - Projeto - Docker Todo-List
+- [x] 19.4 - [Projeto - Docker Todo-List](https://github.com/flaviojoaofelix/trybe-project-docker-todo-list)
 
 ##### Bloco 20: [Introdução à SQL](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/03-desenvolvimento-back-end/bloco-20-introducao-a-sql)
 - [x] 20.1 - Introdução - Bancos de dados relacionais
 - [x] 20.1 - Banco de dados SQL
 - [x] 20.2 - Encontrando dados em um banco de dados
 - [x] 20.3 - Filtrando dados de forma específica
-- [ ] 20.4 - Manipulando tabelas
-- [ ] 20.5 - Projeto - All For One
+- [x] 20.4 - Manipulando tabelas
+- [x] 20.5 - [Projeto - All For One](https://github.com/flaviojoaofelix/trybe-project-mysql-all-for-one)
 
 ##### Bloco 21: [Funções SQL, JOINs e Normalização](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/03-desenvolvimento-back-end/bloco-21-funcoes-sql-joins-e-normalizacao)
-- [ ] 21.1 - Funções mais usadas no SQL
+- [x] 21.1 - Funções mais usadas no SQL
 - [ ] 21.2 - Descomplicando JOINs e UNIONs
 - [ ] 21.3 - Transformando ideias em um modelo de banco de dados
 - [ ] 21.4 - Aula ao vivo + Projeto - One For All
