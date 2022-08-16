@@ -17,6 +17,8 @@
   - Normalização
   - Bônus
 
+Você pode conferir [aqui](https://docs.microsoft.com/pt-br/office/troubleshoot/access/database-normalization-description#normalizing-an-example-table) um resumo dos pontos mencionados nos vídeos sobre cada uma das Formas Normais, bem como sua aplicação na prática.
+
 ### Exercícios
 #### Agora a prática
 
