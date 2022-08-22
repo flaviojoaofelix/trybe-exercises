@@ -78,3 +78,25 @@ __src/app.js__
 app.get('/', (req, res) => res.status(200).json({ message: 'Olá Mundo!' }));
 ```
 
+9. Adicionando Array de dados ao app.js
+__src/app.js
+```
+// src/app.js
+
+// const express = require('express');
+
+const teams = [
+  {
+    id: 1,
+    name: 'São Paulo Futebol Clube',
+    initials: 'SPF',
+  },
+  {
+    id: 2,
+    name: 'Clube Atlético Mineiro',
+    initials: 'CAM',
+  },
+];
+
+// ...
+```
