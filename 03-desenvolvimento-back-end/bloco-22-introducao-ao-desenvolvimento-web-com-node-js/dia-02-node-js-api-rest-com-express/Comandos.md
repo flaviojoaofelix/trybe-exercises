@@ -177,3 +177,20 @@ app.put('/teams/:id', (req, res) => {
 // ...
 ```
 
+14. Deletando através do método DELETE
+__src/app.js__
+```
+// src/app.js
+
+// ...
+
+app.delete('/teams/:id', (req, res) => {
+  const { id } = req.params;
+  const arrayPosition = teams.findIndex((team) => team.id === Number(id));
+  teams.splice(arrayPosition, 1);
+
+  res.status(200).end();
+});
+
+// ...
+```
