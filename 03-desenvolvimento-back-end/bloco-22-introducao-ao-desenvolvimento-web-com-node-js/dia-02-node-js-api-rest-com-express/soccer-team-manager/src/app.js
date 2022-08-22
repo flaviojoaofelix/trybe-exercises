@@ -48,6 +48,7 @@ app.put('/teams/:id', (req,res) => {
   res.status(200).json({ updatedTeam });
 });
 
+// Para fixar
 app.get('/teams/:id', (req, res) => {
   const team = teams.find((team) => team.id === Number(req.params.id));
 
