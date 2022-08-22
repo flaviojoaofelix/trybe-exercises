@@ -1,9 +1,7 @@
 // src/app.js
-const { application } = require('express');
 const express = require('express');
 
 const app = express();
-
 app.use(express.json());
 
 const teams = [
@@ -27,10 +25,10 @@ app.post('/teams', (req, res) => {
   const newTeam = { ...req.body };
   teams.push(newTeam);
 
-  res.status(201).json({ team: newTeam});
+  res.status(201).json({ team: newTeam });
 });
 
-app.put('/teams/:id', (req,res) => {
+app.put('/teams/:id', (req, res) => {
   const { id } = req.params;
   const { name, initials } = req.body;
   let updatedTeam;
@@ -50,7 +48,7 @@ app.put('/teams/:id', (req,res) => {
 
 // Para fixar
 app.get('/teams/:id', (req, res) => {
-  const team = teams.find((team) => team.id === Number(req.params.id));
+  const team = teams.find((current) => current.id === Number(req.params.id));
 
   res.status(200).json(team);
 });
