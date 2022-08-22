@@ -100,3 +100,51 @@ const teams = [
 
 // ...
 ```
+
+10. Cadastrando times através do método POST
+__src/app.js__
+```
+// src/app.js
+
+// ...
+
+// app.get('/teams', (req, res) => res.status(200).json({ teams }));
+
+app.post('/teams', (req, res) => {
+  const newTeam = { ...req.body };
+  teams.push(newTeam);
+
+  res.status(201).json({ team: newTeam });
+});
+
+// module.exports = app;
+```
+
+11. Cadastrando o time com Thunder Client
+```
+{
+  "id": 3,
+  "name": "Clube de Regatas do Flamengo",
+  "initials": "FLA"
+}
+```
+
+  1. Podemos preencher com a URL da nossa aplicação, esta é a mesma que estamos usando no navegador;
+  2. Podemos escolher o método de envio, observer que tem vários, já aprendemos alguns e outros ainda vamos ver. Neste caso pode escolher o método do tipo POST;
+  3. Lembra que queremos enviar os dados pelo corpo da requisição? Então aqui pode escolher Body.
+  4. Quando optamos pela opção Body, isso nos habilita escolher o formato de envio! Existem vários também, mas agora vamos optar por JSON.
+  5. Após escolher o formato em que vamos enviar nossos dados, podemos escrevê-lo em formato JSON no campo abaixo.
+
+12. Preparando a API para receber dados
+__src/app.js__
+```
+// src/app.js
+
+// ...
+
+// const app = express();
+
+app.use(express.json());
+
+// ...
+```
