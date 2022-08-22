@@ -70,3 +70,11 @@ __package.json__
 ```
 npm i nodemon -D
 ```
+
+8. Adicionando um 'Hello, world!' na API
+__src/app.js__
+```
+// Inserir essa linha de código antes de 'module.exports'
+app.get('/', (req, res) => res.status(200).json({ message: 'Olá Mundo!' }));
+```
+
