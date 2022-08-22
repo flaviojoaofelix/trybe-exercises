@@ -40,4 +40,33 @@ __.gitignore__
 node_modules
 ```
 
-6.
+6. Criando o Servidor
+__src/app.js__
+```
+const express = require('express');
+
+const app = express();
+
+module.exports = app;
+```
+
+__src/server.js__
+```
+const app = require('./app');
+
+app.listen(3001, () => console.log('server running on port 3001'));
+```
+
+__package.json__
+```
+// Insira estes 3 scripts, dentro da chave "scripts"
+
+"start": "node src/server.js",
+"dev": "nodemon src/server.js",
+"lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json ."
+```
+
+7. Instalando o Nodemon
+```
+npm i nodemon -D
+```
