@@ -29,4 +29,22 @@ app.post('/teams', (req, res) => {
   res.status(201).json({ team: newTeam});
 });
 
+app.put('/teams/:id', (req,res) => {
+  const { id } = req.params;
+  const { name, initials } = req.body;
+  let updatedTeam;
+
+  for (let i = 0; i < teams.length; i += 1) {
+    const team = teams[i];
+
+    if (team.id === Number(id)) {
+      team.name = name;
+      team.initials = initials;
+      updatedTeam = team;
+    }
+  }
+
+  res.status(200).json({ updatedTeam });
+});
+
 module.exports = app;
