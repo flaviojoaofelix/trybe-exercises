@@ -1,4 +1,5 @@
 // src/app.js
+const { application } = require('express');
 const express = require('express');
 
 const app = express();
@@ -45,6 +46,12 @@ app.put('/teams/:id', (req,res) => {
   }
 
   res.status(200).json({ updatedTeam });
+});
+
+app.get('/teams/:id', (req, res) => {
+  const team = teams.find((team) => team.id === Number(req.params.id));
+
+  res.status(200).json(team);
 });
 
 module.exports = app;
