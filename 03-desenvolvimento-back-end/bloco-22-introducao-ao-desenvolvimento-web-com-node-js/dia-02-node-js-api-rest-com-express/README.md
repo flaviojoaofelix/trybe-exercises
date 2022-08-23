@@ -52,3 +52,7 @@ const activities = [
 4. 🚀 Crie um endpoint do tipo GET com a rota /myActivities/:id, que possa listar uma atividade do array por id
 5. 🚀 Crie um endpoint do tipo GET com a rota /myActivities, que possa listar todas as atividades do array
 6. 🚀 Crie um endpoint do tipo GET com a rota /filter/myActivities, que possa listar todas as atividades filtradas por status do array. A rota deve receber a informação por query e a chave deve-se chamar status. A chave status vai trazer consigo valor de Feito ou A fazer e o endpoint deve fazer o filtro das atividades
+
+#### Bônus
+
+7. 🚀 Crie um endpoint do tipo GET com a rota /search/myActivities, que possa listar todas as atividades filtradas por um termo específico do array. A rota deve receber a informação por query e a chave deve-se chamar q. A chave vai trazer consigo valor de 'cachorro' por exemplo, e o filtro deve trazer apenas as atividades com esse termo, se não encontrar, traga um array vazio.

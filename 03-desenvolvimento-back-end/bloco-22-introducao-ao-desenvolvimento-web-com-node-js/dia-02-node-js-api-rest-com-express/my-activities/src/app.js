@@ -24,4 +24,15 @@ app.get('/filter/myActivities', (req, res) => {
   res.status(200).json(filtered);
 });
 
+app.get('/search/myActivities', (req, res) => {
+  const { q } = req.query;
+  let filtered;
+
+  if (q) {
+    filtered = activities.filter((act) => act.description.includes(q));
+  }
+
+  res.status(200).json(filtered);
+});
+
 module.exports = app;
