@@ -28,6 +28,8 @@
 - Status 401: Unauthorized/Unauthenticated: Necessita de autenticação para obter a resposta.
 ```
 
+##### Para os próximos exercícios use os dados abaixo:
+
 ```
 const activities = [
   {
@@ -47,6 +49,7 @@ const activities = [
   },
 ];
 ```
+##### Respostas (AQUI)[https://github.com/flaviojoaofelix/trybe-exercises/tree/main/03-desenvolvimento-back-end/bloco-22-introducao-ao-desenvolvimento-web-com-node-js/dia-02-node-js-api-rest-com-express/my-activities/src]
 
 3. 🚀 Crie um servidor Node.js utilizando o framework Express
 4. 🚀 Crie um endpoint do tipo GET com a rota /myActivities/:id, que possa listar uma atividade do array por id
