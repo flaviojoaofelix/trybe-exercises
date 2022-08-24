@@ -1,5 +1,6 @@
 const express = require('express');
 const validateName = require('./middlewares/validateName');
+const validatePrice = require('./middlewares/validatePrice');
 
 const app = express();
 
