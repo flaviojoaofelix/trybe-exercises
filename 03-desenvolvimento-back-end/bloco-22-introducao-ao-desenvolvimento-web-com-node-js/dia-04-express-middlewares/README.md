@@ -1,5 +1,5 @@
 # Trybe
-## Bloco 22 - dia 03
+## Bloco 22 - dia 04
 ### Introdução ao desenvolvimento Web com Node.js
 ### Express: Middlewares
 
@@ -17,7 +17,7 @@
 ### Exercícios
 #### Agora, a prática
 
-##### Exercício 1 🚀
+##### [Exercício 1](https://github.com/flaviojoaofelix/trybe-exercises/tree/main/03-desenvolvimento-back-end/bloco-22-introducao-ao-desenvolvimento-web-com-node-js/dia-04-express-middlewares/ecoturismo) 🚀
 
 Você foi procurado por uma startup de Ecoturismo para construir uma aplicação backend que auxilie na criação e compartilhamento de locais ainda não registrados na natureza. O objetivo é valorizar e promover a capacidade turística do Brasil e os principais requisitos da API que essa startup solicitou são:
 
@@ -89,7 +89,7 @@ Agora, faça os exercícios abaixo:
   - Retornar o status 400 e uma mensagem em formato json;
     - Sugestão: { "message": "O campo difficulty deve ser \'Fácil\', \'Médio\' ou \'Difícil\'" }.
 
-##### Exercício 2 🚀
+##### [Exercício 2](https://github.com/flaviojoaofelix/trybe-exercises/tree/main/03-desenvolvimento-back-end/bloco-22-introducao-ao-desenvolvimento-web-com-node-js/dia-04-express-middlewares/ecoturismo) 🚀
 
 Parabéns! Seu o cliente ficou muito satisfeito com seu trabalho e solicitou mais alguns requisitos para você implementar. Veja abaixo:
   - Cadastrar pessoas usuárias das atividades de ecoturismo com as seguintes informações:
