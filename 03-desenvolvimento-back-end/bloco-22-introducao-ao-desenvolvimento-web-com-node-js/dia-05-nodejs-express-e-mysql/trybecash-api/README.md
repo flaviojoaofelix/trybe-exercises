@@ -125,3 +125,53 @@ app.listen(port, async () => {
 
 });
 ```
+
+## Escrevendo Testes TDD
+### Instalando dependências
+```
+npm i mocha@10.0.0 chai@4.3.6 sinon@14.0.0 chai-http@4.3.0 -D
+```
+
+### Criando subdiretório para testes de integração
+```
+mkdir -p tests/integration
+```
+
+### Criando os primeiros testes
+__src/tests/integration/people.test.js__
+```
+const chai = require('chai');
+const chaiHttp = require('chai-http');
+const sinon = require('sinon');
+
+const app = require('../../src/app');
+const connection = require('../../src/db/connection');
+
+const { expect, use } = chai;
+
+use(chaiHttp);
+
+describe('Testando os endpoints de people', function () {
+  it('Testando o cadastro de uma pessoa ', async function () {
+    sinon.stub(connection, 'execute').resolves([{ insertId: 42 }]);
+
+    const response = await chai
+      .request(app)
+      .post('/people')
+      .send(
+        {
+          firstName: 'Luke',
+          lastName: 'Skywalker',
+          email: 'luke.skywalker@trybe.com',
+          phone: '851 678 4453',
+        },
+      );
+
+    expect(response.status).to.equal(201);
+    expect(response.body).to.
+      deep.equal({ message: 'Pessoa cadastrada com sucesso com o id 42' });
+  });
+
+  afterEach(sinon.restore);
+});
+```
