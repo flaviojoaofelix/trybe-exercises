@@ -1,4 +1,5 @@
 const readline = require('readline-sync');
+const bmiTable = require('./bmiTable');
 
 const handleBMI = (weight, height) => {
   console.log(`BODY MASS INDEX`);
@@ -11,13 +12,26 @@ const handleBMI = (weight, height) => {
   return BMI;
 };
 
+const handleTableResult = (bmi) => {
+  const possibilities = Object.keys(bmiTable);
+
+  const result = possibilities.find((possibility) => {
+    const { maxBMI, minBMI } = bmiTable[possibility];
+
+    return bmi >= minBMI && bmi <= maxBMI;
+  });
+
+  return result;
+};
+
 const main = () => {
   const weight = readline.questionFloat('What\'s your weight? (kg) ');
   const height = readline.questionInt('What\'s your height? (cm) ');
 
   const BMI = handleBMI(weight, height);
+  const BMITableResult = handleTableResult(BMI);
 
-  console.log(`Resultado: ${BMI.toFixed(2)}`)
+  console.log(`IMC: ${BMI.toFixed(2)} - ${BMITableResult}`);
 }
 
 main();
