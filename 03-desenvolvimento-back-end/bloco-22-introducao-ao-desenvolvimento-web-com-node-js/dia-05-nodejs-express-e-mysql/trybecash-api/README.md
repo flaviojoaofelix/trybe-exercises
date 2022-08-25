@@ -73,3 +73,55 @@ CREATE TABLE logs(
     REFERENCES people(id)
 );
 ```
+
+## Configurando o MySQL no Express
+```
+npm i express@4.17.1 mysql2@2.3.3
+```
+
+__src/db/connections.js__
+```
+const mysql = require('mysql2/promise');
+
+const connection = mysql.createPool({
+  host: 'localhost',
+  port: 3307,
+  user: 'root',
+  password: 'root',
+  database: 'trybecashdb',
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0});
+
+module.exports = connection;
+```
+
+### Criando o App.JS
+```
+const express = require('express');
+
+const app = express();
+
+app.use(express.json());
+
+module.exports = app;
+```
+
+### Atualizando o Server.JS
+```
+const app = require('./app');
+const connection = require('./db/connection');
+
+const port = 3001;
+
+app.listen(port, async () => {
+  console.log(`API TrybeCash está sendo executada na porta ${port}`);
+
+  // O código abaixo é para testarmos a comunicação com o MySQL
+  const [ result ] = await connection.execute('SELECT 1');
+  if (result) {
+    console.log('MySQL connection OK');
+  }
+
+});
+```
