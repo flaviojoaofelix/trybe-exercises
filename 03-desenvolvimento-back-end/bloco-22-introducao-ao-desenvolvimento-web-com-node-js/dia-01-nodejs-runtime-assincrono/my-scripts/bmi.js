@@ -12,7 +12,7 @@ const handleBMI = (weight, height) => {
 };
 
 const main = () => {
-  const weight = readline.questionInt('What\'s your weight? (kg) ');
+  const weight = readline.questionFloat('What\'s your weight? (kg) ');
   const height = readline.questionInt('What\'s your height? (cm) ');
 
   const BMI = handleBMI(weight, height);
