@@ -7,12 +7,14 @@ const validateRating = require('./middlewares/validateRating');
 const validateDifficulty = require('./middlewares/validateDifficulty');
 const validateSignup = require('./middlewares/validateSignup');
 const generateToken = require('./utils/generateToken');
+const auth = require('./middlewares/auth');
 
 const app = express();
 
 app.use(express.json());
 
 app.post('/activities',
+  auth,
   validateDifficulty,
   validateRating,
   validateCreatedAt,
