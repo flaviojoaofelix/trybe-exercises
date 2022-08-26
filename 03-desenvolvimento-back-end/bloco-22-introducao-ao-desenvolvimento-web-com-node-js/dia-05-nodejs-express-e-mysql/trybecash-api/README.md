@@ -175,3 +175,74 @@ describe('Testando os endpoints de people', function () {
   afterEach(sinon.restore);
 });
 ```
+
+## Criando o endpoint de cadastro de pessoa
+```
+mkdir -p src/routes
+```
+
+__src/routes/peopleRoutes.js__
+```
+const express = require('express');
+
+const router = express.Router();
+
+router.post('/', (req, res) => {
+  const person = req.body;
+  res.status(201).json(person);
+});
+
+module.exports = router;
+```
+
+__src/app.js__
+```
+// const express = require('express');
+const peopleRoutes = require('./routes/peopleRoutes');
+
+// const app = express();
+
+// app.use(express.json());
+
+app.use('/people', peopleRoutes);
+
+// module.exports = app;
+```
+
+### Realizando comunicação com o MySQL
+__src/db/peopleDB.js__
+```
+const conn = require('./connection');
+
+const insert = (person) => conn.execute(
+    `INSERT INTO people 
+      (first_name, last_name, email, phone) VALUES (?, ?, ?, ?)`,
+    [person.firstName, person.lastName, person.email, person.phone],
+  );
+
+module.exports = {
+  insert,
+};
+```
+
+### Refatorando o endpoint Post /
+__src/routes/peopleRoutes.js__
+```
+// const express = require('express');
+const peopleDB = require('../db/peopleDB');
+
+// const router = express.Router();
+
+router.post('/', async (req, res) => {
+  const person = req.body;
+  try {
+    const [result] = await peopleDB.insert(person);
+    res.status(201).json({
+      message: `Pessoa cadastrada com sucesso com o id ${result.insertId}` });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: 'Ocorreu um erro ao cadastrar uma pessoa' });
+  }
+});
+// module.exports = router;
+```
