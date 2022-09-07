@@ -145,3 +145,27 @@ CREATE TABLE setor(
     INSERT INTO funcionario_setor (funcionario_id, setor_id) VALUES(14, 2);
     INSERT INTO funcionario_setor (funcionario_id, setor_id) VALUES(15, 5);
 ```
+
+### Hora de mexer os dedos
+
+__Entidades__
+| Entidade 01 | Entidade 02 | Entidade 03 | Entidade 04 |
+| :---------: | :---------: | :---------: | :---------: |
+| Álbum | Artista | Estilo Musical | Canção |
+
+__Atributos__
+| Álbum | Artista | Estilo Musical | Canção |
+| :---: | :-----: | :------------: | :----: |
+| album_id | artista_id | estilo_id | cancao_id |
+| titulo | nome | nome | nome |
+| preco | - | - | album_id |
+| estilo_id | - | - | - |
+| artista_id | - | - | - | - |
+
+__Relacionamentos__
+- Artista 1:N Albuns
+  - Um artista pode possuir um ou mais álbuns;
+- Estilo Musical 1:N Albuns
+  - Um estilo musical pode estar contido em um ou mais álbuns;
+- Álbum 1:N Canções
+  - Um álbum pode possuir uma ou mais canções.
