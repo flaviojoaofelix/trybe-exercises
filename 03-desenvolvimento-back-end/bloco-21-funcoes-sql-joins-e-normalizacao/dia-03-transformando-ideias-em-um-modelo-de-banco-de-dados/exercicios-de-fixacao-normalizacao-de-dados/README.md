@@ -148,6 +148,8 @@ CREATE TABLE setor(
 
 ### Hora de mexer os dedos
 
+1. Identificar as entidades, atributos e relacionamentos.
+
 __Entidades__
 | Entidade 01 | Entidade 02 | Entidade 03 | Entidade 04 |
 | :---------: | :---------: | :---------: | :---------: |
@@ -169,3 +171,56 @@ __Relacionamentos__
   - Um estilo musical pode estar contido em um ou mais álbuns;
 - Álbum 1:N Canções
   - Um álbum pode possuir uma ou mais canções.
+
+![Relacionamento entre Tabelas](./relationship1-93a141ea1c9c85a74907a29a7cc1662e.webp)
+
+2. Criar o diagrama e o banco novamente por conta própria, sem olhar as respostas, que estão encapsuladas.
+
+![Relacionamento entre Tabelas](./relationship2-f0009f942d82b45f440519c021eadb99.png)
+
+### Criando o banco
+
+```
+    DROP SCHEMA IF EXISTS Albuns;
+    CREATE SCHEMA Albuns;
+    USE Albuns;
+```
+
+Crie a tabela de artistas.
+```
+    CREATE TABLE artista(
+	    artista_id INT PRIMARY KEY AUTO_INCREMENT,
+	    nome VARCHAR(50) NOT NULL
+    );
+```
+
+Crie a tabela de estilos musicais.
+```
+    CREATE TABLE estilo_musical(
+	    estilo_id INT PRIMARY KEY AUTO_INCREMENT,
+	    nome VARCHAR(50) NOT NULL
+    );
+```
+
+Crie a tabela de albuns levando em consideração que as colunas de estilo e artista são chaves estrangeiras referenciando as tabelas criadas anteriormente.
+```
+    CREATE TABLE album(
+	    album_id INT PRIMARY KEY AUTO_INCREMENT,
+	    titulo VARCHAR(50) NOT NULL,
+	    preço INT NOT NULL,
+        estilo_id INT NOT NULL,
+        artista_id INT NOT NULL,
+	    FOREIGN KEY (estilo_id) REFERENCES estilo_musical (estilo_id),
+        FOREIGN KEY (artista_id) REFERENCES artista (artista_id)
+    );
+```
+
+Crie a tabela de canções levando em consideração que a coluna de album deve ser uma chave estrangeira referenciando a tabela correspondente.
+```
+    CREATE TABLE cancao(
+	    cancao_id INT PRIMARY KEY AUTO_INCREMENT,
+	    nome VARCHAR(50) NOT NULL,
+        album_id INT NOT NULL,
+	    FOREIGN KEY (album_id) REFERENCES album (album_id)
+    );
+```
