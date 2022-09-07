@@ -111,4 +111,12 @@ describe('Testando a API Cacao Trybe', function () {
     });
   });
 
+  describe('Usando o método GET em / chocates/total', function () {
+    it('', async function () {
+      const response = await chai.request(app).get('/chocolates/total');
+
+      expect(response.status).to.be.equal(200);
+      expect(response.body).to.deep.equal({ totalChocolates: 4 });
+    });
+  });
 });
