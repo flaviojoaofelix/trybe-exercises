@@ -112,7 +112,7 @@ describe('Testando a API Cacao Trybe', function () {
   });
 
   describe('Usando o método GET em / chocates/total', function () {
-    it('', async function () {
+    it('Retorna a quantidade total de chocolates', async function () {
       const response = await chai.request(app).get('/chocolates/total');
 
       expect(response.status).to.be.equal(200);
