@@ -1,0 +1,61 @@
+# Trybe
+## Bloco 22 - dia 02
+### Introdução ao desenvolvimento Web com Node.js
+### Node.js: API REST com Express
+
+### Conteúdos
+
+1. Como iniciamos a construção de qualquer coisa?
+2. Meu primeiro servidor Node.js
+3. Express
+4. Abrindo nossa API pro mundo com Endpoints
+5. 'Hello, world!' na nossa API
+6. Listando times através do método GET
+7. E essa tal arquitetura REST
+8. Em suma
+
+### Exercícios
+#### Agora, a prática
+
+1. Para que é usado o código de status 400 e 422?
+```
+- Status 400: Bad Request - O servidor não entendeu a requisição / Sintaxe inválida.
+- Status 422: Unprocessable Entity: A requisição está inabilitada para seguir devido a erros semânticos.
+```
+
+2. Para que é usado o código de status 401?
+```
+- Status 401: Unauthorized/Unauthenticated: Necessita de autenticação para obter a resposta.
+```
+
+##### Para os próximos exercícios use os dados abaixo:
+
+```
+const activities = [
+  {
+    id: 1,
+    description: 'Banho no cachorro',
+    status: 'A fazer',
+  },
+  {
+    id: 2,
+    description: 'Cortar a grama',
+    status: 'A fazer',
+  },
+  {
+    id: 3,
+    description: 'Estudar JavaScript',
+    status: 'Feito',
+  },
+];
+```
+##### Respostas [AQUI](https://github.com/flaviojoaofelix/trybe-exercises/tree/main/03-desenvolvimento-back-end/bloco-22-introducao-ao-desenvolvimento-web-com-node-js/dia-02-node-js-api-rest-com-express/my-activities/src)
+
+3. 🚀 Crie um servidor Node.js utilizando o framework Express
+4. 🚀 Crie um endpoint do tipo GET com a rota /myActivities/:id, que possa listar uma atividade do array por id
+5. 🚀 Crie um endpoint do tipo GET com a rota /myActivities, que possa listar todas as atividades do array
+6. 🚀 Crie um endpoint do tipo GET com a rota /filter/myActivities, que possa listar todas as atividades filtradas por status do array. A rota deve receber a informação por query e a chave deve-se chamar status. A chave status vai trazer consigo valor de Feito ou A fazer e o endpoint deve fazer o filtro das atividades
+
+#### Bônus
+
+7. 🚀 Crie um endpoint do tipo GET com a rota /search/myActivities, que possa listar todas as atividades filtradas por um termo específico do array. A rota deve receber a informação por query e a chave deve-se chamar q. A chave vai trazer consigo valor de 'cachorro' por exemplo, e o filtro deve trazer apenas as atividades com esse termo, se não encontrar, traga um array vazio.
