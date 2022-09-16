@@ -8,6 +8,10 @@ Para gerar um 'esqueleto' de uma _migration_, executamos o seguinte comando:
 ```
 npx sequelize migration:generate --name create-user
 ```
+ou, um outro exemplo onde usamos o __--underscored__ (antes do attributes), para nomear as colunas em _snake case_, como é o padrão para o MySQL:
+```
+npx sequelize model:generate --name create-user --underscored --attributes fullName:string,email:string,phoneNum:string
+```
 - Dessa forma é criado um novo arquivo _[timestamp]-create-user.js_, que, no nosso caso, vai para a pasta __src/migrations__, com o seguinte código:
 __src/migrations/[timestamp]-create-user.js__
 ```
