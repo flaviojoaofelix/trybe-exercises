@@ -89,14 +89,14 @@ npm install express
 Vamos instalar algumas outras dependências:
 ```
 npm install dotenv --save
-npm install -D nodemon
+npm install -d nodemon
 ```
 Adicionamos o nodemon ao _package.json_:
 ```
 //  {
 //  ...
 //  "main": "src/server.js",
-    "dev": "nodemon ./server.js",
+    "dev": "nodemon src/server.js",
 //  ...
 //  }
 ```
