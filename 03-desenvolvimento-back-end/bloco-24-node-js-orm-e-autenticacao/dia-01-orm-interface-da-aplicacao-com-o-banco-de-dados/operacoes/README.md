@@ -86,6 +86,21 @@ Lembrando que temos que instalar o _express_ no projeto para que tudo funcione c
 ```
 npm install express
 ```
+Vamos instalar algumas outras dependências:
+```
+npm install dotenv --save
+npm install -D nodemon
+```
+Adicionamos o nodemon ao _package.json_:
+```
+//  {
+//  ...
+//  "main": "src/server.js",
+    "dev": "nodemon ./server.js",
+//  ...
+//  }
+```
+
 E rodamos o servidor com o comando:
 ```
 node src/server.js
