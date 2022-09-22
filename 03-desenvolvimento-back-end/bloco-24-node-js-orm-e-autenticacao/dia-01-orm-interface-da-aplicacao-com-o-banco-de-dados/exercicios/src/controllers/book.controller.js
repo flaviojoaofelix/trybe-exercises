@@ -6,6 +6,10 @@ const getAll = async (_req, res) => {
     return res.status(200).json(books);
   } catch (e) {
     console.log(e.message);
-    res.status(500).json({ message: 'Ocorreu um erro' });
+    res.status(500).json({ message: 'Algo deu errado' });
   }
+};
+
+module.exports = {
+  getAll,
 };
