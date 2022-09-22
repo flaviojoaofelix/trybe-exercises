@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   book.init({
     title: DataTypes.STRING,
     author: DataTypes.STRING,
-    page_quantity: DataTypes.INTEGER
+    pageQuantity: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'book',
