@@ -5,5 +5,6 @@ const bookController = require('../controllers/book.controller');
 
 routes.get('/', bookController.getAll);
 routes.get('/:id', bookController.getById);
+routes.post('/', bookController.create);
 
 module.exports = routes;
