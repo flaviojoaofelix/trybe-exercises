@@ -7,9 +7,10 @@ const getAll = async () => {
 };
 
 const getById = async (id) => {
-  const book = await book.findByPk(id);
-
-  return book;
+  console.log(id);
+  const books = await book.findByPk(id);
+  
+  return books;
 };
 
 module.exports = {
