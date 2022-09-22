@@ -14,7 +14,7 @@ const getById = async (id) => {
 };
 
 const create = async (title, author, pageQuantity) => {
-  const newBook = await book.create({ fullName, email });
+  const newBook = await book.create({ title, author, pageQuantity });
 
   return newBook;
 };
