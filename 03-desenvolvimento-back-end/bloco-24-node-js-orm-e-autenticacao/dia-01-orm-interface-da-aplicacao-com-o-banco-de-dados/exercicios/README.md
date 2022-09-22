@@ -109,3 +109,19 @@ Obs: Execute o comando _npx sequelize db:migrate_ e confirme a criação da tabe
 #### 17. Vincular a rota __DELETE__ _/books/:id_ ao _controller_
 
 💡 Em caso de erro, os endpoints retornam status _500_ e mensagem _'Algo deu errado_.
+
+## Bônus
+
+1. Crie um _seeder_ usando o _Sequelize-CLI_, populando a sua base com pelo menos um livro;
+
+2. Crie um método _getByAuthor_ em _BooksService_ para buscar uma lista de livros por author;
+
+3. Refatore o método _getAll_ de forma que ser for enviado uma query string _author_ ele seja capaz de pegar a lista usando o método _getByAuthor_ de _BooksService_;
+
+4. Refatore os métodos _getAll_ e _getByAuthor_ para que a lista de livros seja ordenada pelo título em ordem alfabética;
+
+5. Crie uma migration para adicionar a coluna _publisher_ (editora) na tabela _Books_. Modifique as camadas de serviço para que esse campo seja utilizado no cadastro e na edição;
+
+6. Escreva testes unitários para o _model_;
+
+7. Escreva testes unitários para o _service_ criado, isolando a camada de _models_.
