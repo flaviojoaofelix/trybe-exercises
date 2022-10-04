@@ -1,0 +1,37 @@
+"use strict";
+var weekDays;
+(function (weekDays) {
+    weekDays[weekDays["Sunday"] = 0] = "Sunday";
+    weekDays[weekDays["Monday"] = 1] = "Monday";
+    weekDays[weekDays["Tuesday"] = 2] = "Tuesday";
+    weekDays[weekDays["Wednesday"] = 3] = "Wednesday";
+    weekDays[weekDays["Thrusday"] = 4] = "Thrusday";
+    weekDays[weekDays["Friday"] = 5] = "Friday";
+    weekDays[weekDays["Saturday"] = 6] = "Saturday";
+})(weekDays || (weekDays = {}));
+var rainbowColors;
+(function (rainbowColors) {
+    rainbowColors[rainbowColors["Red"] = 0] = "Red";
+    rainbowColors[rainbowColors["Orange"] = 1] = "Orange";
+    rainbowColors[rainbowColors["Yellow"] = 2] = "Yellow";
+    rainbowColors[rainbowColors["Green"] = 3] = "Green";
+    rainbowColors[rainbowColors["Blue"] = 4] = "Blue";
+    rainbowColors[rainbowColors["Indigo"] = 5] = "Indigo";
+    rainbowColors[rainbowColors["Violet"] = 6] = "Violet";
+})(rainbowColors || (rainbowColors = {}));
+console.log(`Dias da Semana`);
+console.log(weekDays.Sunday);
+console.log(weekDays[1]);
+console.log(weekDays.Tuesday);
+console.log(weekDays[3]);
+console.log(weekDays.Thrusday);
+console.log(weekDays[5]);
+console.log(weekDays.Saturday);
+console.log(`Cores do Arco-iris`);
+console.log(rainbowColors.Red);
+console.log(rainbowColors[1]);
+console.log(rainbowColors.Yellow);
+console.log(rainbowColors[3]);
+console.log(rainbowColors.Blue);
+console.log(rainbowColors[5]);
+console.log(rainbowColors.Violet);
