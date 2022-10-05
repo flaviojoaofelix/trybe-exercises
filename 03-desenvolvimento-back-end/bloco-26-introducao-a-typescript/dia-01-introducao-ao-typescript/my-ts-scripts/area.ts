@@ -1,4 +1,4 @@
-function convert(value: number, fromUnit: string, toUnit: string): number {
+export function convert(value: number, fromUnit: string, toUnit: string): number {
   const units = ["km²", "hm²", "dam²", "m²", "dm²", "cm²", "mm²"];
   
   const fromIndex = units.indexOf(fromUnit);
@@ -7,5 +7,3 @@ function convert(value: number, fromUnit: string, toUnit: string): number {
 
   return value * Math.pow(100, exponent);
 }
-
-console.log(convert(1, 'm²', 'km²'));

@@ -1,4 +1,4 @@
-function convert(value: number, fromUnit: string, toUnit: string): number {
+export function convert(value: number, fromUnit: string, toUnit: string): number {
   const units = ["kl", "hl", "dal", "l", "dl", "cl", "ml"];
 
   const fromIndex = units.indexOf(fromUnit);
@@ -7,5 +7,3 @@ function convert(value: number, fromUnit: string, toUnit: string): number {
 
   return value * Math.pow(10, exponent);
 }
-
-console.log(convert(1, 'kl', 'l'));

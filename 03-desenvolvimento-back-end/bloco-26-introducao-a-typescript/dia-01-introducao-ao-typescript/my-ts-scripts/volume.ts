@@ -1,4 +1,4 @@
-function convert(value: number, fromUnit: string, toUnit: string): number {
+export function convert(value: number, fromUnit: string, toUnit: string): number {
   const units = ["km³", "hm³", "dam³", "m³", "dm³", "cm³", "mm³"];
   
   const fromIndex = units.indexOf(fromUnit);
@@ -7,5 +7,3 @@ function convert(value: number, fromUnit: string, toUnit: string): number {
 
   return value * Math.pow(1000, exponent);
 }
-
-console.log(convert(1, 'km³', 'm³'));

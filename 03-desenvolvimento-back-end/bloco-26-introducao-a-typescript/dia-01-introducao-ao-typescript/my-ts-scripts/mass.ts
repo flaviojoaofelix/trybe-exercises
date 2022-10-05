@@ -1,4 +1,4 @@
-function convert(value: number, fromUnit: string, toUnit: string): number {
+export function convert(value: number, fromUnit: string, toUnit: string): number {
   const units = ["kg", "hg", "dag", "g", "dg", "cg", "mg"];
 
   const fromIndex = units.indexOf(fromUnit);
@@ -7,5 +7,3 @@ function convert(value: number, fromUnit: string, toUnit: string): number {
 
   return value * Math.pow(10, exponent);
 }
-
-console.log(convert(1, 'kg', 'g'));
