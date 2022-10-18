@@ -1,4 +1,4 @@
-class pessoaEstudante {
+class PessoaEstudante {
   private _matricula: number;
   private _nome: string;
   private _notasProva: number[];
@@ -48,4 +48,29 @@ class pessoaEstudante {
   get notasTrabalho(): number[] {
     return this._notasTrabalho;
   }
+
+  public somaNotas(): number {
+    const todasAsNotas = [...this.notasProva, ...this.notasTrabalho]
+    
+    return todasAsNotas.reduce((notaAnterior, notaAtual) => {
+      const somaDasNotas = notaAtual + notaAnterior;
+      return somaDasNotas;
+    }, 0);
+  }
+
+  public mediaNotas(): number {
+    const somaDasNotas = this.somaNotas();
+    const divisor = this.notasProva.length + this.notasTrabalho.length;
+
+    return Math.round(somaDasNotas / divisor);
+  }
 }
+
+// Exercício 02 - Testando
+const PessoaEstudante01 = new PessoaEstudante(9999999, 'José Dirceu');
+PessoaEstudante01.notasProva = [9, 7, 10, 8];
+PessoaEstudante01.notasTrabalho = [8, 7];
+
+console.log(PessoaEstudante01);
+console.log(`Soma das Notas: ${PessoaEstudante01.somaNotas()}`);
+console.log(`Média das Notas: ${PessoaEstudante01.mediaNotas()}`);
