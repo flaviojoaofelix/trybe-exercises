@@ -139,65 +139,53 @@ Contém todas as atividades desenvolvidas por __[mim](https://www.linkedin.com/i
 - [x] 20.4 - Manipulando tabelas
 - [x] 20.5 - [Projeto - All For One](https://github.com/flaviojoaofelix/trybe-project-mysql-all-for-one)
 
-##### Bloco 21: [Funções SQL, JOINs e Normalização](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/03-desenvolvimento-back-end/bloco-21-funcoes-sql-joins-e-normalizacao)
+##### Bloco 21: [Funções SQL, JOINs e Normalização](https://github.com/flaviojoaofelix/trybe-exercises/tree/main/03-desenvolvimento-back-end/bloco-21-funcoes-sql-joins-e-normalizacao)
 - [x] 21.1 - Funções mais usadas no SQL
-- [ ] 21.2 - Descomplicando JOINs e UNIONs
-- [ ] 21.3 - Transformando ideias em um modelo de banco de dados
-- [ ] 21.4 - Aula ao vivo + Projeto - One For All
+- [x] 21.2 - Descomplicando JOINs e UNIONs
+- [x] 21.3 - Transformando ideias em um modelo de banco de dados
+- [x] 21.4 - Aula ao vivo + Projeto - One For All
 
-##### Bloco 22: [Normalização e Modelagem de Banco de Dados](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/03-desenvolvimento-back-end/bloco-22-normalizacao-e-modelagem-de-banco-de-dados)
-- [ ] 22.1 - Transformando ideias em um modelo de banco de dados
-- [ ] 22.2 - Normalização, Formas Normais e Dumps
-- [ ] 22.3 - Transformando ideias em um modelo de banco de dados - Parte 2
-- [ ] 22.4 - Projeto - One For All
+##### Bloco 22: [Introdução ao desenvolvimento Web com Node.js](https://github.com/flaviojoaofelix/trybe-exercises/tree/main/03-desenvolvimento-back-end/bloco-22-introducao-ao-desenvolvimento-web-com-node-js)
+- [x] 22.1 - Node.js - Runtime Assíncrono
+- [x] 22.2 - Node.js: API REST com Express
+- [ ] 22.3 - Node.js: Testes de Integração
+- [x] 22.4 - Node.js: Express e Middlewares
+- [x] 22.5 - Node.js: Express e MySQL
+- [x] 22.6 - Atividades + Projeto - Talker Manager
 
-##### Bloco 22: [Introdução ao desenvolvimento Web com Node.js](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/03-desenvolvimento-back-end/bloco-22-introducao-ao-desenvolviment-web-com-node-js)
-- [ ] 22.1 - Intro - Node.js
-- [ ] 22.1 - Node.js - Um motor JavaScript
-- [ ] 22.2 - Node.js - Fluxo Assíncrono
-- [ ] 22.3 - Mocha, Chai e Sinon - Testes de Back-end com Node.js
-- [ ] 22.4 - Express - HTTP com Node.js
-- [ ] 22.5 - Express - Middlewares
-- [ ] 22.5 - Atividades + Projeto - Talker Manager
+##### Bloco 23: [Arquitetura de Software: Model, Service e Controller](https://github.com/flaviojoaofelix/trybe-exercises/tree/main/03-desenvolvimento-back-end/bloco-23-arquitetura-de-software-model-service-e-controller)
+- [x] 23.1 - Arquitetura de Software - Camada Model
+- [x] 23.2 - Arquitetura de Software - Camada Service
+- [ ] 23.3 - Arquitetura de Software - Camada Controller
+- [x] 23.4 - Projeto - Store Manager
 
-##### Bloco 23: [Node.js: Camada de Serviço e Arquitetura Rest e Restful](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/03-desenvolvimento-back-end/bloco-23-mongodb-updates-simples-e-complexos)
-- [ ] 23.1 - Introdução - Arquitetura de Software
-- [ ] 23.1 - Arquitetura de Software - Camada de Model
-- [ ] 23.2 - Arquitetura de Software - Camada de Controller e Service
-- [ ] 23.3 - Arquitetura Web - Rest e Restful
-- [ ] 23.4 - Arquitetura de Software - Testando as Camadas
-- [ ] 23.5 - Projeto - Store Manager
+##### Bloco 24: [Node.js: ORM e Autenticação](https://github.com/flaviojoaofelix/trybe-exercises/tree/main/03-desenvolvimento-back-end/bloco-24-node-js-orm-e-autenticacao)
+- [x] 24.1 - ORM - Interface da aplicação com o banco de dados
+- [x] 24.2 - ORM - Associations 1:1 e 1:n
+- [ ] 24.3 - ORM - Associations N:N e Transactions
+- [ ] 24.4 - JWT - (JSON Web Token)
+- [x] 24.5 - Projeto - [API de Blogs](https://github.com/flaviojoaofelix/trybe-project-blogs-api)
 
-##### Bloco 24: [Node.js: ORM e Autenticação](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/03-desenvolvimento-back-end/bloco-24-node-js-orm-e-autenticacao)
-- [ ] 24.1 - Introdução - Node.js: ORM e Autenticação
-- [ ] 24.1 - ORM - Interface da aplicação com o banco de dados
-- [ ] 24.2 - ORM - Associations
-- [ ] 24.3 - JWT - (JSON Web Token)
-- [ ] 24.4 - Testando APIs com Testes de Integração
-- [ ] 24.5 - Projeto - API de Blogs
-
-##### Bloco 25: [Deployment](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/03-desenvolvimento-back-end/bloco-25-deployment)
-- [ ] 25.1 - Introdução - Deploy
-- [ ] 25.1 - Infraestrutura - Deploy com Heroku
+##### Bloco 25: [Deployment](https://github.com/flaviojoaofelix/trybe-exercises/tree/main/03-desenvolvimento-back-end/bloco-25-deployment)
+- [x] 25.1 - Infraestrutura - Deploy com Heroku
 - [ ] 25.2 - Deploy Docker & Heroku
-- [ ] 25.3 - Projeto - Stranger Things
+- [x] 25.3 - Projeto - Stranger Things
 
-##### Bloco 26: [TypeScript](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/03-desenvolvimento-back-end/bloco-26-typescript)
-- [ ] 26.1 - Introdução - TypeScript
-- [ ] 26.1 - Introdução ao TypeScript
-- [ ] 26.2 - Tipagem Estática e Generics
+##### Bloco 26: [TypeScript](https://github.com/flaviojoaofelix/trybe-exercises/tree/main/03-desenvolvimento-back-end/bloco-26-introducao-a-typescript)
+- [x] 26.1 - Introdução ao TypeScript
+- [x] 26.2 - Tipagem Estática e Generics
 - [ ] 26.3 - Express com TypeScript
-- [ ] 26.3 - Projeto - Trybe Smith
+- [x] 26.3 - Projeto - Trybe Smith
 
-# CORRIGIDO ATÉ AQUI #
-## FALTA CORRIGIR ABAIXO ##
+##### Bloco 27: [Programação Orientada a Objetos (POO) e SOLID](https://github.com/flaviojoaofelix/trybe-exercises/tree/main/03-desenvolvimento-back-end/bloco-27-programacao-orientada-a-objetos-poo-e-solid)
+- [x] 28.1 - Introdução à Orientação a Objetos
+- [ ] 28.2 - Heranças e Interfaces
+- [ ] 28.3 - Polimorfismo
+- [ ] 28.4 - SOLID - Introdução e Princípios S, O e D
+- [ ] 28.5 - SOLID - Princípios L e I
+- [ ] 28.4 - Projeto - Trybers and Dragons
 
-##### Bloco 27: [Autenticação e Upload de Arquivos](https://github.com/flaviojoaofelix/trybe-exercises/tree/master/03-desenvolvimento-back-end/bloco-28-autenticacao-e-upload-de-arquivos)
-- [ ] 28.1 - NodeJS - JWT - (JSON Web Token)
-- [ ] 28.2 - NodeJS - Upload de arquivos com Multer
-- [ ] 28.3 - NodeJS - Testando APIs com Testes de Integração
-- [ ] 28.4 - Projeto - Cookmaster
-
+<!---
 ##### Bloco 29: Arquitetura: SOLID e ORM
 - [ ] 30.1 - Arquitetura - Princípios SOLID
 - [ ] 30.2 - ORM - Interface da aplicação com o banco de dados
@@ -252,3 +240,4 @@ Contém todas as atividades desenvolvidas por __[mim](https://www.linkedin.com/i
 - [ ] 37.2 - Deque
 - [ ] 37.3 - Pilhas
 - [ ] 37.4 - Projeto - TING - Trybe Is Not Google
+--->
