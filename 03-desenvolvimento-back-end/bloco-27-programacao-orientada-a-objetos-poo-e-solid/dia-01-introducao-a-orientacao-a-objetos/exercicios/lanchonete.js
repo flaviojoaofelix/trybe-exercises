@@ -58,11 +58,25 @@ class Pedido {
     get desconto() {
         return this._desconto;
     }
+    calcularTotal() {
+        const valorTotal = this._items.reduce((valorAnterior, itemAtual) => {
+            const total = valorAnterior + itemAtual.preco;
+            return total;
+        }, 0);
+        return valorTotal;
+    }
+    calcularTotalComDesconto() {
+        const valorTotalComDesconto = this.calcularTotal() * (1 - this._desconto);
+        return valorTotalComDesconto;
+    }
 }
-// Testando
+// Testando - Questão 04
 const cliente = new Cliente('Flávio');
 const item01 = new ItemPedido('Risoles de Queijo', 6.00);
 const item02 = new ItemPedido('Café Expresso', 4.00);
 const item03 = new ItemPedido('Copo da Felicidade', 20.00);
 const pedido = new Pedido(cliente, [item01, item02, item03], 'Cartão de Crédito', 0.30);
 console.log(pedido);
+// Testando - Questão 05
+console.log(`Valor Total: R$${pedido.calcularTotal()}`);
+console.log(`Valor com Desconto (${pedido.desconto * 100}%): R$${pedido.calcularTotalComDesconto()}`);
